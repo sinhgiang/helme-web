@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Helme release screenshots (source)</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="shot.css">
+</head>
+<body>
+<!--
+  Source of the screenshots on /updates. Every shot is a Helme window drawn in HTML with
+  fictional sample projects. One <section> per release; its id is the file name of the PNG.
+  How to render: see README.md ("Adding a release").
+-->
+
+<!-- v0.1.0: first build, six panes -->
+<section class="shot" id="v0-1-0">
+  <div class="tb"><span>Coordination</span><span class="on x">Products</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="main g6">
+    <div class="pane"><div class="ph">shop-web <em>Working</em></div><pre><span class="o">●</span> Reading the task in the status file
+  Task: new checkout page
+<span class="o">●</span> Editing app/checkout/page.tsx
+  <span class="g">+ Order summary card</span>
+  <span class="g">+ Delivery options</span>
+<span class="o">●</span> npm test
+  <span class="g">✓ 42 passed</span></pre></div>
+    <div class="pane"><div class="ph">mobile-app <em>Working</em></div><pre><span class="o">●</span> Reproducing the login crash
+  Found: token is empty after
+  the app comes back to front
+<span class="o">●</span> Fix on helme/login-crash
+  <span class="g">✓ flutter test passed</span></pre></div>
+    <div class="pane"><div class="ph">booking-api <em class="a">Needs permission</em></div><pre><span class="o">●</span> Rate limit on /search
+  <span class="g">✓ Build passed</span>
+
+<span class="a">Allow this command?</span>
+  git push origin helme/rate-limit
+  <span class="b">› 1. Yes</span>   2. No</pre></div>
+    <div class="pane"><div class="ph">docs-site <em>Working</em></div><pre><span class="o">●</span> Writing the setup guide
+  3 of 5 sections done
+<span class="o">●</span> Checking links
+  <span class="g">✓ 0 broken</span></pre></div>
+    <div class="pane"><div class="ph">analytics <em>Turn finished</em></div><pre><span class="o">●</span> Weekly signups chart added
+  <span class="g">✓ Preview deployed</span>
+  Status file updated with the
+  branch and the test result.
+
+<span class="y">›</span> <span class="cur"></span></pre></div>
+    <div class="pane"><div class="ph">landing <em class="m">Asks a question</em></div><pre><span class="o">●</span> Two hero images are ready.
+  Which one should go live?
+  A) team at work
+  B) product close-up
+
+<span class="y">›</span> <span class="cur"></span></pre></div>
+  </div>
+  <div class="sb"></div>
+</section>
+
+<!-- v0.2.2: night shift, tickets, restore, version bar -->
+<section class="shot" id="v0-2-2">
+  <div class="tb"><span class="on">Coordination</span><span>Tickets</span><span class="x">shop-web</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="main cols2">
+    <div class="pane"><div class="ph">Chief of Staff</div><pre><span class="y">you ›</span> what happened last night?
+
+<span class="o">● Chief of Staff</span>
+  The night shift ran on 3 projects.
+  <span class="g">✓</span> shop-web     checkout tests added
+  <span class="g">✓</span> booking-api  rate limit, review PASS
+  <span class="g">✓</span> docs-site    setup guide finished
+  The morning report is ready on the right.
+
+<span class="y">you ›</span> <span class="cur"></span></pre></div>
+    <div class="rp">
+      <div class="rpt"><span class="on">Status</span><em>Updated 06:31</em></div>
+      <div class="sec"><h4>Morning report</h4>
+        <div class="item"><span class="t">Morning report, Saturday<small>3 projects worked overnight · 1 needs you</small></span><span class="lk">Open</span></div>
+      </div>
+      <div class="sec"><h4>Night shift</h4>
+        <div class="row"><span class="dot g"></span>23:00 Night work<span class="rt">done 01:48</span></div>
+        <div class="row"><span class="dot g"></span>02:00 Night review<span class="rt">done 02:21</span></div>
+        <div class="row"><span class="dot g"></span>03:00 Email scan<span class="rt">done 03:04</span></div>
+        <div class="row"><span class="dot g"></span>05:00 Eval and lessons<span class="rt">done 05:09</span></div>
+        <div class="row"><span class="dot g"></span>06:30 Morning report<span class="rt">done 06:30</span></div>
+        <div class="row"><span class="m">Quota</span><span class="rt">5 h: 22% · 7 days: 41%</span></div>
+      </div>
+      <div class="sec"><h4>Open projects</h4>
+        <div class="row"><span class="dot g"></span><b>shop-web</b><code>helme/checkout · 0 changed</code><span class="rt">opened 08:05</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="sb"><span>You are on v0.2.1</span><span class="new">New version v0.2.2 is available</span><span class="btn">Install</span></div>
+</section>
+
+<!-- v0.3.1: Reports tab -->
+<section class="shot" id="v0-3-1">
+  <div class="tb"><span class="on">Coordination</span><span>Tickets</span><span class="x">shop-web</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="main cols2">
+    <div class="pane"><div class="ph">Chief of Staff</div><pre><span class="y">you ›</span> compare the three payment providers
+      for shop-web
+
+<span class="o">● Chief of Staff</span>
+  Report written: reports/chief/
+  payment-providers.md
+  Short answer: provider B fits best,
+  lowest fee for small orders.
+  Full table is in the Reports tab.
+
+<span class="y">you ›</span> <span class="cur"></span></pre></div>
+    <div class="rp">
+      <div class="rpt"><span>Status</span><span class="on">Reports</span><em>Updated 10:12</em></div>
+      <div class="reader" style="margin-bottom:10px">
+        <div class="rh"><b>Payment providers for shop-web</b><span class="sp"></span><span class="bt">Expand</span></div>
+        <div class="doc">
+          <h2>Payment providers for shop-web</h2>
+          <p><b>Answer:</b> provider B. Lowest fee for orders under $20, payouts in 2 days.</p>
+          <h3>Comparison</h3>
+          <table><tr><th>Provider</th><th>Fee</th><th>Payout</th></tr>
+            <tr><td>A</td><td>2.9% + 30¢</td><td>7 days</td></tr>
+            <tr><td>B</td><td>1.9% + 10¢</td><td>2 days</td></tr>
+            <tr><td>C</td><td>2.4% + 25¢</td><td>3 days</td></tr></table>
+          <h3>What you decide</h3>
+          <ul><li>Approve provider B for shop-web</li></ul>
+        </div>
+      </div>
+      <div class="sec list"><h4>Reports</h4>
+        <div class="row"><span class="tag">Chief</span>Payment providers for shop-web<span class="rt">10:11</span></div>
+        <div class="row"><span class="tag">Morning</span>Morning report, Saturday<span class="rt">06:30</span></div>
+        <div class="row"><span class="tag">Review</span>booking-api night review<span class="rt">02:21</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="sb"><span>Helme v0.3.1 · Latest version</span></div>
+</section>
+
+<!-- v0.4.0: Chief sends work to open agents -->
+<section class="shot" id="v0-4-0">
+  <div class="tb"><span class="on">Coordination</span><span>Tickets</span><span class="x">shop-web</span><span class="x">mobile-app</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="main cols2">
+    <div class="pane"><div class="ph">Chief of Staff</div><pre><span class="y">you ›</span> tell mobile-app to add dark mode too
+
+<span class="o">● Chief of Staff</span>
+  <span class="m">$</span> <span class="y">helme send</span> mobile-app "Add dark mode.
+    Follow the system setting, keep the
+    brand colours, test on Android."
+  Sent: mobile-app is working on a task,
+  so this one waits in its queue.
+
+<span class="m">[helme] mobile-app finished its turn:
+        login crash fixed, tests passed</span>
+<span class="m">[helme] mobile-app started the next
+        task from the queue: dark mode</span>
+
+<span class="y">you ›</span> <span class="cur"></span></pre></div>
+    <div class="rp">
+      <div class="rpt"><span class="on">Status</span><span>Reports</span><em>Updated 14:20</em></div>
+      <div class="sec"><h4>Open projects</h4>
+        <div class="row"><span class="dot g"></span><b>mobile-app</b><code>helme/dark-mode</code><span class="rt">Working</span></div>
+        <div class="redline" style="color:var(--blue)">Task from Chief: Add dark mode.</div>
+        <div class="row"><span class="dot g"></span><b>shop-web</b><code>helme/checkout</code><span class="rt">Working</span></div>
+        <div class="row"><span class="dot y"></span><b>booking-api</b><code>helme/rate-limit</code><span class="rt">Waiting for you</span></div>
+        <div class="redline">Blocked: needs approval to push</div>
+      </div>
+      <div class="sec"><h4>Latest review</h4>
+        <div class="row"><span class="g">PASS</span> booking-api · rate limit on search<span class="rt">13:02</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="sb"><span>Helme v0.4.0 · Latest version</span></div>
+</section>
+
+<!-- v0.5.2: connections -->
+<section class="shot" id="v0-5-2">
+  <div class="tb"><span class="on">Coordination</span><span>Tickets</span><span class="x">shop-web</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="main cols2">
+    <div class="pane"><div class="ph">shop-web</div><pre><span class="o">●</span> Checkout page finished
+  <span class="g">✓ npm test: 48 passed</span>
+  <span class="g">✓ npm run build</span>
+  <span class="g">✓ no secrets in the commit</span>
+<span class="o">●</span> git push origin helme/checkout
+<span class="o">●</span> vercel deploy
+  <span class="g">✓ Preview ready</span>
+  https://shop-web-preview.example.app
+<span class="o">●</span> Status file updated: branch, commit,
+  preview address. Not on main yet.</pre></div>
+    <div class="rp">
+      <div class="rpt"><span class="on">Status</span><span>Reports</span><em>Updated 16:40</em></div>
+      <div class="sec"><h4>Connections</h4>
+        <div class="row"><span class="dot g"></span><b>GitHub</b><span class="rt">Connected as sample-owner</span></div>
+        <div class="row"><span class="dot g"></span><b>Vercel</b><span class="rt">Connected as sample-owner</span></div>
+        <div class="row"><span class="dot g"></span><b>Supabase</b><span class="rt">Connected through MCP</span></div>
+        <div class="row"><span class="dot y"></span><b>Firebase</b><span class="rt">Needs login · <code>firebase login</code></span></div>
+        <div class="row"><span class="dot r"></span><b>Flutter</b><span class="rt">Not installed</span></div>
+        <div class="row"><span class="m">MCP servers</span><span class="rt">Gmail, Google Drive, Notion, Vercel</span></div>
+        <div style="margin-top:10px"><span class="bt">Check again</span></div>
+      </div>
+      <div class="sec"><h4>Deploy rule</h4>
+        <div class="item"><span class="t">Agents deploy finished, checked work by themselves<small>Money, domains, keys and app store releases still wait for you</small></span></div>
+      </div>
+    </div>
+  </div>
+  <div class="sb"><span>Helme v0.5.2 · Latest version</span></div>
+</section>
+
+<!-- v0.5.6: auto-approved tickets -->
+<section class="shot" id="v0-5-6">
+  <div class="tb"><span>Coordination</span><span class="on">Tickets</span><span class="x">shop-web</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="toolbar"><b>Tickets</b><span class="sel">All projects ▾</span><span class="m">T-0121 auto-approved from your order</span><span class="sp"></span><span class="bt pri">New ticket</span></div>
+  <div class="board">
+    <div class="colm"><h5>PROPOSED <i>1</i></h5>
+      <div class="tk"><span class="id">T-0119</span><span class="pill">analytics</span><p>Change the ad budget for spring</p><small>Waits for you: touches money</small></div>
+    </div>
+    <div class="colm"><h5>APPROVED <i>1</i></h5>
+      <div class="tk"><span class="id">T-0121</span><span class="pill">docs-site</span><p>Add a FAQ page</p><small><span class="auto">Auto-approved</span> "add a FAQ page to the docs"</small></div>
+    </div>
+    <div class="colm"><h5>DOING <i>2</i></h5>
+      <div class="tk"><span class="id">T-0117</span><span class="pill">shop-web</span><p>New checkout page</p></div>
+      <div class="tk blk"><span class="id">T-0118</span><span class="pill">mobile-app</span><p>Apple sign-in</p><small class="r">Blocked: waiting for your login</small></div>
+    </div>
+    <div class="colm"><h5>REVIEW <i>1</i></h5>
+      <div class="tk"><span class="id">T-0116</span><span class="pill">booking-api</span><p>Rate limit on search</p></div>
+    </div>
+    <div class="colm"><h5>DONE <i>2</i></h5>
+      <div class="tk"><span class="id">T-0114</span><span class="pill">landing</span><p>New hero image</p></div>
+      <div class="tk"><span class="id">T-0113</span><span class="pill">mobile-app</span><p>Login crash on Android</p></div>
+    </div>
+  </div>
+  <div class="sb"><span>Helme v0.5.6 · Latest version</span></div>
+</section>
+
+<!-- v0.5.10: waiting list -->
+<section class="shot" id="v0-5-10">
+  <div class="tb"><span class="on">Coordination</span><span>Tickets</span><span class="x">shop-web</span><span class="x">mobile-app</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="main cols2">
+    <div class="pane"><div class="ph">Chief of Staff</div><pre><span class="y">you ›</span> I approved the payment provider
+
+<span class="o">● Chief of Staff</span>
+  Closed: "Approve the payment provider
+  for shop-web". It is off your list.
+  shop-web goes on with the checkout.
+
+  Two things still wait for you, both
+  on the right.
+
+<span class="y">you ›</span> <span class="cur"></span></pre></div>
+    <div class="rp">
+      <div class="rpt"><span class="on">Status</span><span>Reports</span><em>Updated 11:05</em></div>
+      <div class="sec"><h4>Needs your decision <span class="cnt">2</span></h4>
+        <div class="m" style="margin:2px 0 6px">mobile-app</div>
+        <div class="item"><span class="t">Pick one of two app icons</span><span class="lk">How to</span><span class="bt">Done</span></div>
+        <div class="m" style="margin:8px 0 6px">analytics</div>
+        <div class="item"><span class="t">Log in to the analytics account</span><span class="lk">How to</span><span class="bt">Done</span></div>
+      </div>
+      <div class="sec"><h4>Open projects</h4>
+        <div class="row"><span class="dot g"></span><b>shop-web</b><code>helme/checkout</code><span class="rt">Working</span></div>
+        <div class="row"><span class="dot y"></span><b>mobile-app</b><code>helme/app-icon</code><span class="rt">Waiting for you</span></div>
+      </div>
+      <div class="sec"><h4>Latest review</h4>
+        <div class="row"><span class="g">PASS</span> booking-api · rate limit on search<span class="rt">10:40</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="sb"><span>Helme v0.5.10 · Latest version</span></div>
+</section>
+
+<!-- v0.5.14: drop preview -->
+<section class="shot" id="v0-5-14" style="position:relative">
+  <div class="tb"><span>Coordination</span><span>Tickets</span><span class="on x">Web</span><span class="x">Apps</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="main g4">
+    <div class="pane"><div class="ph">shop-web</div><pre><span class="o">●</span> Checkout page
+  <span class="g">✓ 48 tests passed</span></pre></div>
+    <div class="pane"><div class="ph">docs-site</div><pre><span class="o">●</span> FAQ page
+  4 questions written</pre></div>
+    <div class="pane drop">Drop here<small>mobile-app</small></div>
+    <div class="pane"><div class="ph">landing</div><pre><span class="o">●</span> New hero image
+  <span class="g">✓ Preview deployed</span></pre></div>
+  </div>
+  <div class="ghost" style="left:240px;top:470px">⋮ mobile-app</div>
+  <div class="sb"><span>Helme v0.5.14 · Latest version</span></div>
+</section>
+
+<!-- v0.5.16: auto review and queues -->
+<section class="shot" id="v0-5-16">
+  <div class="tb"><span>Coordination</span><span class="on">Tickets</span><span class="x">shop-web</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="toolbar"><b>Tickets</b><span class="sel">All projects ▾</span><span class="m">T-0124 approved: Chief starts it now</span><span class="sp"></span><span class="bt pri">New ticket</span></div>
+  <div class="queue">
+    <div class="q"><b>shop-web</b>T-0124 Coupon codes · next</div>
+    <div class="q"><b>mobile-app</b>T-0125 Dark mode · next, T-0126 Push sounds</div>
+    <div class="q"><b>Review</b>T-0122 reviewing · T-0123 waiting</div>
+  </div>
+  <div class="board">
+    <div class="colm"><h5>PROPOSED <i>0</i></h5><small class="m">Nothing here</small></div>
+    <div class="colm"><h5>APPROVED <i>3</i></h5>
+      <div class="tk"><span class="id">T-0124</span><span class="pill">shop-web</span><p>Coupon codes</p><small>Queued after T-0117</small></div>
+      <div class="tk"><span class="id">T-0125</span><span class="pill">mobile-app</span><p>Dark mode</p><small>Queued</small></div>
+      <div class="tk"><span class="id">T-0126</span><span class="pill">mobile-app</span><p>Push sounds</p><small>Queued</small></div>
+    </div>
+    <div class="colm"><h5>DOING <i>1</i></h5>
+      <div class="tk"><span class="id">T-0117</span><span class="pill">shop-web</span><p>New checkout page</p></div>
+    </div>
+    <div class="colm"><h5>REVIEW <i>2</i></h5>
+      <div class="tk"><span class="id">T-0122</span><span class="pill">docs-site</span><p>FAQ page</p><small class="b">Reviewer is reading the branch</small></div>
+      <div class="tk"><span class="id">T-0123</span><span class="pill">landing</span><p>New hero image</p><small>In the review queue</small></div>
+    </div>
+    <div class="colm"><h5>DONE <i>1</i></h5>
+      <div class="tk"><span class="id">T-0116</span><span class="pill">booking-api</span><p>Rate limit on search</p><small><span class="g">Verdict: approve</span> · report</small></div>
+    </div>
+  </div>
+  <div class="sb"><span>Helme v0.5.16 · Latest version</span></div>
+</section>
+
+<!-- v0.5.19: how-to per item, recently closed -->
+<section class="shot" id="v0-5-19">
+  <div class="tb"><span class="on">Coordination</span><span>Tickets</span><span class="x">mobile-app</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="main cols2">
+    <div class="pane"><div class="ph">Chief of Staff</div><pre><span class="y">you ›</span> merge pull request 14 of shop-web
+
+<span class="o">● Chief of Staff</span>
+  <span class="m">$</span> <span class="y">helme merge</span> shop-web 14
+  <span class="g">✓</span> Your words checked: merge, PR 14,
+    shop-web. Review verdict: approve.
+  <span class="g">✓</span> Merged into main.
+
+<span class="y">you ›</span> <span class="cur"></span></pre></div>
+    <div class="rp">
+      <div class="rpt"><span>Status</span><span class="on">Reports</span><em>Updated 18:02</em></div>
+      <div class="sec"><h4>Waiting for you <span class="cnt">1</span></h4>
+        <div class="item"><span class="t">Turn on two-step login for the app store account<small>mobile-app</small></span><span class="lk">How to</span><span class="bt">Done</span></div>
+        <div class="m" style="font-size:12px;margin-top:4px">▸ Recently closed (3)</div>
+      </div>
+      <div class="reader" style="margin-bottom:10px">
+        <div class="rh"><b>How to</b><span class="m">Turn on two-step login</span><span class="sp"></span><span class="bt">Back to list</span><span class="bt">Expand</span></div>
+        <div class="doc">
+          <h2>Turn on two-step login</h2>
+          <p>The app store asks for it before the next release.</p>
+          <h3>Steps</h3>
+          <ol><li>Open the account page and choose Security.</li><li>Press Turn on next to Two-step login.</li><li>Scan the code with your phone.</li><li>Type the six digits it shows.</li></ol>
+          <h3>What shows it is right</h3>
+          <ul><li>Security says "Two-step login: On".</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sb"><span>Helme v0.5.19 · Latest version</span></div>
+</section>
+
+<!-- v0.5.25: reports layout, keep view -->
+<section class="shot" id="v0-5-25">
+  <div class="tb"><span class="on">Coordination</span><span>Tickets</span><span class="x">shop-web</span><span class="x">docs-site</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="main" style="grid-template-columns: 1fr 1.15fr">
+    <div class="pane"><div class="ph">Chief of Staff</div><pre><span class="y">you ›</span> done, I logged in
+
+<span class="o">● Chief of Staff</span>
+  Checked: the login works.
+  Closed "Log in to the analytics
+  account". Two things are left.
+
+<span class="y">you ›</span> <span class="cur"></span></pre></div>
+    <div class="rp">
+      <div class="rpt"><span>Status</span><span class="on">Reports</span><em>Updated 09:15</em></div>
+      <div class="sec"><h4>Waiting for you <span class="cnt">2</span></h4>
+        <div class="item"><span class="t">Choose the launch price<small>shop-web</small></span><span class="lk">How to</span><span class="bt">Done</span></div>
+        <div class="item"><span class="t">Approve the new pricing page text<small>landing</small></span><span class="lk">How to</span><span class="bt">Done</span></div>
+      </div>
+      <div class="reader">
+        <div class="rh"><b>Choose the launch price</b><span class="sp"></span><span class="bt">Back to list</span><span class="bt">Expand</span></div>
+        <div class="doc">
+          <h2>Choose the launch price</h2>
+          <p>Three options, from the market report.</p>
+          <table><tr><th>Plan</th><th>Price</th><th>Fits</th></tr>
+            <tr><td>Basic</td><td>$9</td><td>one shop</td></tr>
+            <tr><td>Pro</td><td>$19</td><td>up to five shops</td></tr></table>
+          <h3>What you do</h3>
+          <ul><li>Reply to the Chief with the price you choose.</li></ul>
+        </div>
+      </div>
+      <div class="sec list"><h4>Reports</h4>
+        <div class="row"><span class="tag">Chief</span>Launch price options<span class="rt">08:50</span></div>
+        <div class="row"><span class="tag">Review</span>docs-site FAQ page<span class="rt">08:31</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="sb"><span>Helme v0.5.25 · Latest version</span></div>
+</section>
+
+<!-- v0.5.28: Apply proposals, install tools -->
+<section class="shot" id="v0-5-28">
+  <div class="tb"><span class="on">Coordination</span><span>Tickets</span><span class="x">shop-web</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="main" style="grid-template-columns: 1fr 1.2fr">
+    <div class="pane"><div class="ph">Chief of Staff</div><pre><span class="y">you ›</span> make tickets about sending email
+      wait for me, but not every message
+
+<span class="o">● Chief of Staff</span>
+  Proposal ready: change the phrases
+  that hold a ticket for you.
+  Press Apply on the right if it looks
+  right. Only your click changes it.
+
+<span class="y">you ›</span> <span class="cur"></span></pre></div>
+    <div class="rp">
+      <div class="rpt"><span class="on">Status</span><span>Reports</span><em>Updated 21:47</em></div>
+      <div class="sec"><h4>Needs your decision <span class="cnt">1</span></h4>
+        <div class="item" style="display:block">
+          <div style="display:flex;gap:10px;align-items:center"><span class="t">Change the auto-approve phrases: Sending to real people</span><span class="bt pri">Apply</span><span class="bt">Done</span></div>
+          <div class="diff">
+            <div><h6>Before</h6>email<br><span class="minus">− send</span>message to customers</div>
+            <div><h6>After</h6>email<br><span class="plus">+ send email</span>message to customers</div>
+          </div>
+        </div>
+      </div>
+      <div class="sec"><h4>Connections</h4>
+        <div class="row"><span class="dot g"></span><b>GitHub</b><span class="rt">Connected</span></div>
+        <div class="row"><span class="dot g"></span><b>Vercel</b><span class="rt">Connected</span></div>
+        <div class="row"><span class="dot r"></span><b>Firebase</b><span class="rt">Not installed</span><span class="bt pri">Install</span></div>
+        <div class="row"><span class="dot y"></span><b>Supabase</b><span class="rt">Needs login</span><span class="bt">Log in</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="sb"><span>Helme v0.5.28 · Latest version</span></div>
+</section>
+
+</body>
+</html>
