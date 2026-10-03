@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Helme — Run a team of AI agents from one screen</title>
+<meta name="description" content="Helme runs a team of AI coding agents on your Windows PC: a Chief of Staff that plans, one agent per project, a Reviewer that checks every change, and one list of what waits for you.">
+<meta property="og:title" content="Helme — Run a team of AI agents from one screen">
+<meta property="og:description" content="A Chief of Staff, one agent per project, a Reviewer before every merge. You decide, the agents do the work.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="brand" aria-label="Helme home">
+      <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 29 27H3z" fill="currentColor"/></svg>
+      <span>Helme</span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#safety">Safety</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- 1. Hero -->
+<section class="hero grid-bg">
+  <div class="wrap">
+    <p class="eyebrow"><span class="dot"></span> For founders who don't write code</p>
+    <h1>Run a team of AI agents<br class="br-lg"> from one screen.</h1>
+    <p class="lede">Helme gives every project its own AI agent, puts a Chief of Staff in charge of all of them, and has a Reviewer check the work before it ships. You make the decisions. The agents do the rest.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#how">See how it works</a>
+      <a class="btn btn-ghost" href="#features">Explore features</a>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <figure class="window" aria-label="Illustration of the Helme window with fictional data">
+      <div class="win-bar">
+        <span class="lights"><i></i><i></i><i></i></span>
+        <div class="tabs" role="presentation">
+          <span class="tab on">Coordination</span>
+          <span class="tab">Tickets</span>
+          <span class="tab">shop-web</span>
+          <span class="tab hide-sm">mobile-app</span>
+          <span class="tab hide-sm">booking-api</span>
+          <span class="tab">Review</span>
+          <span class="tab plus">+</span>
+        </div>
+      </div>
+      <div class="win-body">
+        <div class="pane term">
+          <div class="pane-h"><span class="grip">⋮⋮</span> Chief of Staff</div>
+<pre class="t"><span class="p">you ›</span> Ship the new checkout on shop-web this week,
+      and fix the crash on the mobile app login.
+
+<span class="a">● Chief of Staff</span>
+  Two tickets created and sent:
+  <span class="ok">✓</span> T-0112 shop-web     new checkout page
+  <span class="ok">✓</span> T-0113 mobile-app   login crash on Android
+  Agents are on it. I'll tell you when the
+  Reviewer has checked both.
+
+<span class="a">● Chief of Staff</span>
+  One thing needs you: the payment provider
+  asks for your approval. Added to your list.
+
+<span class="p">you ›</span> <span class="cursor"></span></pre>
+        </div>
+        <div class="pane report">
+          <div class="rep-tabs"><span class="on">Status</span><span>Reports</span><em>Updated 09:41</em></div>
+          <div class="rep-sec">
+            <h4>Waiting for you <b>2</b></h4>
+            <div class="wait"><span>Approve the payment provider for shop-web</span><a>How to</a><a class="done">Done</a></div>
+            <div class="wait"><span>Pick one of two app icons for mobile-app</span><a>How to</a><a class="done">Done</a></div>
+          </div>
+          <div class="rep-sec">
+            <h4>Open projects</h4>
+            <div class="proj"><i class="g"></i><b>shop-web</b><code>helme/checkout</code><span>working</span></div>
+            <div class="proj"><i class="g"></i><b>mobile-app</b><code>helme/login-crash</code><span>working</span></div>
+            <div class="proj"><i class="y"></i><b>booking-api</b><code>helme/rate-limit</code><span>in review</span></div>
+          </div>
+          <div class="rep-sec hide-sm">
+            <h4>Latest review</h4>
+            <div class="rev"><span class="pass">PASS</span> booking-api · rate limit on search</div>
+          </div>
+        </div>
+      </div>
+    </figure>
+    <p class="fig-note">Illustration with fictional projects. Helme runs on your own Windows PC.</p>
+  </div>
+</section>
+
+<!-- 2. Trust strip -->
+<section class="strip">
+  <div class="wrap strip-in">
+    <p>Built and shipped with Helme</p>
+    <ul>
+      <li>Wispra</li><li>Lenvid</li><li>Revova</li><li>Timio</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Big numbers -->
+<section class="stats">
+  <div class="wrap stats-grid">
+    <div class="stat"><b>6</b><span>agents side by side in one tab</span></div>
+    <div class="stat"><b>1</b><span>Chief of Staff who knows every project</span></div>
+    <div class="stat"><b>0</b><span>lines of code you write yourself</span></div>
+    <div class="stat"><b>06:30</b><span>morning report, every day</span></div>
+  </div>
+</section>
+
+<!-- 3. Three pillars -->
+<section id="how" class="section">
+  <div class="wrap">
+    <p class="kicker">How it works</p>
+    <h2>A small company of agents.<br>You are the CEO.</h2>
+    <div class="bento">
+      <article class="cell">
+        <span class="num">01</span>
+        <h3>Chief of Staff plans</h3>
+        <p>Tell it what you want in one plain sentence. It asks if something is unclear, splits the work into tickets, sends each one to the right project, and writes down every decision.</p>
+      </article>
+      <article class="cell">
+        <span class="num">02</span>
+        <h3>One agent per project</h3>
+        <p>Every project gets its own agent in its own terminal pane, up to six per tab. Each works on its own branch, never on main, and reports back with evidence.</p>
+      </article>
+      <article class="cell">
+        <span class="num">03</span>
+        <h3>Reviewer checks first</h3>
+        <p>Before anything is merged, a Reviewer on a different model reads the change and writes a verdict. Nothing reaches production on one agent's word.</p>
+      </article>
+    </div>
+
+    <figure class="panes" aria-label="Six agents working side by side, fictional data">
+      <div class="mini"><div class="mh">shop-web</div><pre>● Editing checkout/page.tsx
+  + Order summary card
+  <span class="ok">✓</span> 42 tests passed</pre></div>
+      <div class="mini"><div class="mh">mobile-app</div><pre>● Reproducing login crash
+  Found: null token on resume
+  <span class="ok">✓</span> Fix on helme/login-crash</pre></div>
+      <div class="mini"><div class="mh">booking-api</div><pre>● Rate limit on /search
+  <span class="ok">✓</span> Build passed
+  → Sent to Reviewer</pre></div>
+      <div class="mini"><div class="mh">docs-site</div><pre>● Writing the setup guide
+  3 of 5 sections done</pre></div>
+      <div class="mini"><div class="mh">analytics</div><pre>● New weekly chart
+  <span class="ok">✓</span> Preview deployed</pre></div>
+      <div class="mini"><div class="mh">Review</div><pre>Verdict: <span class="ok">PASS</span>
+  booking-api rate limit
+  No secrets, tests green</pre></div>
+    </figure>
+  </div>
+</section>
+
+<!-- 4. Features -->
+<section id="features" class="section">
+  <div class="wrap">
+    <p class="kicker">Features</p>
+    <h2>Everything a busy owner needs.<br>Nothing they have to type twice.</h2>
+
+    <div class="feature">
+      <div class="f-text">
+        <h3>Give work in one sentence</h3>
+        <p>Type the way you talk, in any language. The Chief of Staff turns it into tickets with the context, the reason, the expected result and what must not be touched, then hands them to agents that are already open.</p>
+      </div>
+      <div class="f-vis">
+        <div class="card">
+          <div class="chat me">Add Apple sign-in to the mobile app.</div>
+          <div class="chat bot"><b>T-0114</b> created for mobile-app<br><span class="muted">Status: Approved → sent to the open agent</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="f-text">
+        <h3>One list of what waits for you</h3>
+        <p>Every decision that needs you lands in a single list, each with its own step-by-step how-to. Answer it and it disappears. No hunting through chats and folders.</p>
+      </div>
+      <div class="f-vis">
+        <div class="card">
+          <div class="card-h">Waiting for you <b>3</b></div>
+          <div class="wait"><span>Approve the App Store release</span><a>How to</a><a class="done">Done</a></div>
+          <div class="wait"><span>Choose the launch price</span><a>How to</a><a class="done">Done</a></div>
+          <div class="wait"><span>Log in to the hosting account</span><a>How to</a><a class="done">Done</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="f-text">
+        <h3>A morning report at 06:30</h3>
+        <p>Wake up to one page: what shipped yesterday, what the Reviewer said, what is blocked, and what costs were used. Read it with your coffee, decide, move on.</p>
+      </div>
+      <div class="f-vis">
+        <div class="card doc">
+          <div class="card-h">Morning report · Saturday</div>
+          <ul>
+            <li><span class="ok">✓</span> 5 tasks done, 4 reviewed <b>PASS</b></li>
+            <li><span class="warn">!</span> 1 blocked: waiting for your login</li>
+            <li><span class="muted">◷</span> Night shift: 3 projects, 2h 14m</li>
+            <li><span class="muted">◔</span> Usage this week: 41%</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature">
+      <div class="f-text">
+        <h3>A night shift while you sleep</h3>
+        <p>A schedule you can edit by hand: agents work at 23:00, the Reviewer checks at 02:00, lessons are written at 05:00. If the PC was asleep, the work runs as soon as it wakes.</p>
+      </div>
+      <div class="f-vis">
+        <div class="card timeline">
+          <div><code>23:00</code><span>Night work on every project with a task</span></div>
+          <div><code>02:00</code><span>Night review, one verdict per project</span></div>
+          <div><code>03:00</code><span>Email scan, read only</span></div>
+          <div><code>05:00</code><span>Scores, costs and lessons learned</span></div>
+          <div class="hl"><code>06:30</code><span>Morning report on your screen</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature" id="safety">
+      <div class="f-text">
+        <h3>Safety boundaries by default</h3>
+        <p>Agents never touch money, keys and passwords, real customer data, or messages to real people without your yes. They never push to main. When they hit a boundary, they stop and ask, then carry on with other work.</p>
+      </div>
+      <div class="f-vis">
+        <div class="card bounds">
+          <div><span class="no">✕</span>Payments, prices, ad budgets</div>
+          <div><span class="no">✕</span>API keys, passwords, .env files</div>
+          <div><span class="no">✕</span>Changing real data in a database</div>
+          <div><span class="no">✕</span>Emails and posts to real people</div>
+          <div><span class="no">✕</span>Pushing or merging to main</div>
+          <div class="yes-row"><span class="yes">✓</span>Everything else: done, checked, reported</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. You decide -->
+<section class="section decide">
+  <div class="wrap">
+    <p class="kicker">Made for non-coders</p>
+    <h2 class="huge">You decide.<br><span class="dim">Agents do the work.</span></h2>
+    <div class="cols3">
+      <div><h4>No code to read</h4><p>Reports come in plain language, in your language. Code and commits stay in English for the machines.</p></div>
+      <div><h4>Trust grows step by step</h4><p>Say "next time you can decide this yourself" and the agent adds that one kind of task to what it may do alone.</p></div>
+      <div><h4>Everything on your disk</h4><p>Projects, reports and decisions are plain text files on your PC. No cloud database, nothing locked away.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. FAQ -->
+<section id="faq" class="section">
+  <div class="wrap faq-wrap">
+    <div>
+      <p class="kicker">FAQ</p>
+      <h2>Questions</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>What exactly is Helme?</summary>
+        <p>A local app for Windows that opens real terminals for AI coding agents, one per project, and arranges them in tabs and panes. A Chief of Staff agent coordinates them, a Reviewer agent checks their work, and a report area shows what is running and what waits for you.</p>
+      </details>
+      <details>
+        <summary>Do I need to know how to code?</summary>
+        <p>No. Helme was built for an owner who runs several products and does not write code. You give work in plain sentences and answer the decisions that need you.</p>
+      </details>
+      <details>
+        <summary>Which AI does it use?</summary>
+        <p>Project agents run Claude Code by default. The Reviewer can use a model from a different provider than the one that wrote the code, so one model never grades its own work.</p>
+      </details>
+      <details>
+        <summary>Can an agent spend money or leak my keys?</summary>
+        <p>Not without you. Money, secrets, real data and messages to real people are blocked by default. The agent writes down what it needs and why, and waits for your answer.</p>
+      </details>
+      <details>
+        <summary>Does it run in the cloud?</summary>
+        <p>No. Helme runs on your own PC with Node.js, real terminals and plain files. Your code goes only where your projects already live, such as your own GitHub.</p>
+      </details>
+      <details>
+        <summary>Can I download it?</summary>
+        <p>Not yet. Helme is in private use today. This page only introduces it.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Closing -->
+<section class="closing grid-bg">
+  <div class="wrap">
+    <h2 class="huge">Stop being the bottleneck.</h2>
+    <p class="lede">One screen. Every project moving. Only the decisions left for you.</p>
+    <div class="cta-row center">
+      <a class="btn btn-primary" href="#top">Back to top</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <span class="brand small"><svg width="16" height="16" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 29 27H3z" fill="currentColor"/></svg> Helme</span>
+    <span class="muted">Run a team of AI agents from one screen. © 2026</span>
+  </div>
+</footer>
+
+</body>
+</html>
