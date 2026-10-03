@@ -8,6 +8,13 @@
 <meta property="og:title" content="Helme — Run a team of AI agents from one screen">
 <meta property="og:description" content="A Chief of Staff, one agent per project, a Reviewer before every merge. You decide, the agents do the work.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://helme-web.vercel.app">
+<meta property="og:image" content="https://helme-web.vercel.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Helme: run a team of AI agents from one screen">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://helme-web.vercel.app">
 <meta name="theme-color" content="#000000">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -142,7 +149,7 @@
       <article class="cell">
         <span class="num">03</span>
         <h3>Reviewer checks first</h3>
-        <p>Before anything is merged, a Reviewer on a different model reads the change and writes a verdict. Nothing reaches production on one agent's word.</p>
+        <p>Before anything is merged, a Reviewer agent reads the change and writes a verdict. Nothing reaches main without your yes.</p>
       </article>
     </div>
 
@@ -285,7 +292,7 @@
       </details>
       <details>
         <summary>Which AI does it use?</summary>
-        <p>Project agents run Claude Code by default. The Reviewer can use a model from a different provider than the one that wrote the code, so one model never grades its own work.</p>
+        <p>Project agents run Claude Code by default. The Reviewer is a separate agent with its own instructions, and it can be set to a model from another provider, so the code is checked by a second pair of eyes.</p>
       </details>
       <details>
         <summary>Can an agent spend money or leak my keys?</summary>

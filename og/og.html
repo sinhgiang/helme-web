@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Helme OG image</title>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  /* Source of og.png (1200x630). Render: msedge --headless --window-size=1200,630 --screenshot */
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  .og { width: 1200px; height: 630px; display: grid; grid-template-columns: 500px 1fr; gap: 48px; padding: 64px 0 0 64px; }
+  .og h1 { font-size: 60px; text-align: left; }
+  .og .lede { margin: 22px 0 0; font-size: 21px; text-align: left; }
+  .og .brand { font-size: 24px; margin-bottom: 56px; }
+  .og .window { margin: 8px 0 0; width: 760px; max-width: none; }
+  .og .win-body { min-height: 0; grid-template-columns: 1fr; }
+  .og .term { border-right: 0; }
+  .og .t { font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="og grid-bg">
+  <div>
+    <span class="brand"><svg width="26" height="26" viewBox="0 0 32 32"><path d="M16 3 29 27H3z" fill="currentColor"/></svg> Helme</span>
+    <h1>Run a team of AI agents from one screen.</h1>
+    <p class="lede">A Chief of Staff, one agent per project, a Reviewer before every merge. You decide.</p>
+  </div>
+  <figure class="window">
+    <div class="win-bar">
+      <span class="lights"><i></i><i></i><i></i></span>
+      <div class="tabs">
+        <span class="tab on">Coordination</span><span class="tab">Tickets</span><span class="tab">shop-web</span><span class="tab">mobile-app</span><span class="tab">Review</span>
+      </div>
+    </div>
+    <div class="win-body">
+      <div class="pane term">
+        <div class="pane-h"><span class="grip">⋮⋮</span> Chief of Staff</div>
+<pre class="t"><span class="p">you ›</span> Ship the new checkout on shop-web this week,
+      and fix the crash on the mobile app login.
+
+<span class="a">● Chief of Staff</span>
+  Two tickets created and sent:
+  <span class="ok">✓</span> T-0112 shop-web     new checkout page
+  <span class="ok">✓</span> T-0113 mobile-app   login crash on Android
+  Agents are on it. I'll tell you when the
+  Reviewer has checked both.</pre>
+      </div>
+      <div class="pane report">
+        <div class="rep-sec">
+          <h4>Waiting for you <b>1</b></h4>
+          <div class="wait"><span>Approve the payment provider for shop-web</span><a>How to</a><a class="done">Done</a></div>
+        </div>
+      </div>
+    </div>
+  </figure>
+</div>
+</body>
+</html>
