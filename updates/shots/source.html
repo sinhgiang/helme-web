@@ -417,6 +417,171 @@
   <div class="sb"><span>Helme v0.5.28 · Latest version</span></div>
 </section>
 
+<!-- v0.5.29: night shift on open projects (GitHub release asset) -->
+<section class="shot" id="v0-5-29">
+  <div class="tb"><span class="on">Coordination</span><span>Tickets</span><span class="x">shop-web</span><span class="x">docs-site</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="main cols2">
+    <div class="pane"><div class="ph">Chief of Staff</div><pre><span class="y">you ›</span> what did the night shift do?
+
+<span class="o">● Chief of Staff</span>
+  Both projects you left open got
+  night work, in a separate copy:
+  <span class="g">✓</span> shop-web   coupon codes, tests pass
+  <span class="g">✓</span> docs-site  FAQ page, review PASS
+  Your open panes and unsaved changes
+  were not touched.
+
+<span class="y">you ›</span> <span class="cur"></span></pre></div>
+    <div class="rp">
+      <div class="rpt"><span class="on">Status</span><span>Reports</span><em>Updated 06:32</em></div>
+      <div class="sec"><h4>Night shift</h4>
+        <div class="row"><span class="dot g"></span>23:00 Night work<span class="rt">2 projects · done 01:12</span></div>
+        <div class="row"><span class="m" style="padding-left:18px">shop-web</span><code>open in Helme → separate worktree</code><span class="rt">T-0131</span></div>
+        <div class="row"><span class="m" style="padding-left:18px">docs-site</span><code>uncommitted files → separate worktree</code><span class="rt">T-0132</span></div>
+        <div class="row"><span class="dot g"></span>02:00 Night review<span class="rt">done 02:19</span></div>
+        <div class="row"><span class="dot g"></span>06:30 Morning report<span class="rt">done 06:30</span></div>
+      </div>
+      <div class="sec"><h4>Open projects</h4>
+        <div class="row"><span class="dot g"></span><b>shop-web</b><code>helme/checkout · 2 changed</code><span class="rt">untouched</span></div>
+        <div class="row"><span class="dot g"></span><b>docs-site</b><code>helme/faq · 1 changed</code><span class="rt">untouched</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="sb"><span>Helme v0.5.29 · Latest version</span></div>
+</section>
+
+<!-- v0.5.30: model, effort and context per ticket (GitHub release asset) -->
+<section class="shot" id="v0-5-30">
+  <div class="tb"><span>Coordination</span><span class="on">Tickets</span><span class="x">shop-web</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="toolbar"><b>Tickets</b><span class="sel">All projects ▾</span><span class="m">T-0135: model and effort set by the Chief</span><span class="sp"></span><span class="bt pri">New ticket</span></div>
+  <div style="flex:1;display:flex;min-height:0">
+    <div class="board" style="grid-template-columns:repeat(4,1fr)">
+      <div class="colm"><h5>APPROVED <i>2</i></h5>
+        <div class="tk hl"><span class="id">T-0135</span><span class="pill">booking-api</span><p>Redesign the pricing engine</p><small>opus · effort max</small></div>
+        <div class="tk"><span class="id">T-0136</span><span class="pill">docs-site</span><p>Fix three typos</p><small>haiku · effort low</small></div>
+      </div>
+      <div class="colm"><h5>DOING <i>1</i></h5>
+        <div class="tk"><span class="id">T-0134</span><span class="pill">shop-web</span><p>Coupon codes</p><small>default · effort high</small></div>
+      </div>
+      <div class="colm"><h5>REVIEW <i>0</i></h5><small class="m">Nothing here</small></div>
+      <div class="colm"><h5>DONE <i>1</i></h5>
+        <div class="tk"><span class="id">T-0133</span><span class="pill">landing</span><p>New hero image</p></div>
+      </div>
+    </div>
+    <div class="detail">
+      <span class="id m" style="font-family:var(--mono)">T-0135</span><span class="pill">booking-api</span>
+      <h3>Redesign the pricing engine</h3>
+      <dl class="kv">
+        <dt>Model</dt><dd><code>opus</code></dd>
+        <dt>Effort</dt><dd><code>max</code></dd>
+        <dt>Context</dt><dd><code>standard</code></dd>
+        <dt>Priority</dt><dd>high</dd>
+      </dl>
+      <div class="sub">Log</div>
+      <pre style="padding:0;font-size:12px"><span class="m">09:02</span> Chief: hard task, set
+      model opus, effort max
+<span class="m">09:03</span> Helme typed /model and
+      /effort before the task
+<span class="m">--:--</span> Next task: back to defaults</pre>
+    </div>
+  </div>
+  <div class="sb"><span>Helme v0.5.30 · Latest version</span></div>
+</section>
+
+<!-- v0.5.31: several agents per project, each in its own worktree (GitHub release asset) -->
+<section class="shot" id="v0-5-31">
+  <div class="tb"><span>Coordination</span><span>Tickets</span><span class="on x">booking-api</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="main g4">
+    <div class="pane"><div class="ph">booking-api <em>Main agent</em></div><pre><span class="m">folder    booking-api</span>
+<span class="m">branch    helme/search-speed</span>
+
+<span class="o">●</span> Faster hotel search
+  <span class="g">✓</span> Index on city and date
+  <span class="g">✓</span> 64 tests passed</pre></div>
+    <div class="pane"><div class="ph">booking-api · web <em>Lane</em></div><pre><span class="m">worktree  helme/lane-web</span>
+<span class="m">writes    web/ only</span>
+
+<span class="o">●</span> New booking calendar
+  <span class="g">+ Month view</span>
+  <span class="g">+ Keyboard navigation</span></pre></div>
+    <div class="pane"><div class="ph">booking-api · api <em>Lane</em></div><pre><span class="m">worktree  helme/lane-api</span>
+<span class="m">writes    api/ only</span>
+
+<span class="o">●</span> GET /availability
+  <span class="g">✓</span> 21 tests passed
+<span class="r">✕</span> Blocked: write to web/ is
+  outside this lane</pre></div>
+    <div class="pane"><div class="ph">Chief of Staff</div><pre><span class="m">$</span> <span class="y">helme open</span> booking-api --lane web
+<span class="m">$</span> <span class="y">helme open</span> booking-api --lane api
+<span class="m">$</span> <span class="y">helme send</span> booking-api --lane web
+    "Build the month view"
+
+<span class="m">$</span> <span class="y">helme lanes clean</span>
+  Removed 1 finished worktree,
+  kept its branch.</pre></div>
+  </div>
+  <div class="sb"><span>Helme v0.5.31 · Latest version</span></div>
+</section>
+
+<!-- v0.5.33: badge on the Tickets tab (GitHub release asset) -->
+<section class="shot" id="v0-5-33">
+  <div class="tb"><span>Coordination</span><span class="on">Tickets <b class="bub">3</b></span><span class="x">shop-web</span><span class="x">mobile-app</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="toolbar"><b>Tickets</b><span class="sel">All projects ▾</span><span class="m">3 tickets wait for your approval</span><span class="sp"></span><span class="bt pri">New ticket</span></div>
+  <div class="board">
+    <div class="colm"><h5>PROPOSED <i>3</i></h5>
+      <div class="tk hl"><span class="id">T-0142</span><span class="pill">analytics</span><p>Raise the ad budget for the launch week</p><small>Waits for you: touches money</small><div style="margin-top:6px;display:flex;gap:6px"><span class="bt pri">Approve</span><span class="bt">Reject</span></div></div>
+      <div class="tk"><span class="id">T-0141</span><span class="pill">mobile-app</span><p>Send the release to the app store</p><small>Waits for you: release</small></div>
+      <div class="tk"><span class="id">T-0140</span><span class="pill">shop-web</span><p>Email customers about the new checkout</p><small>Waits for you: sending to people</small></div>
+    </div>
+    <div class="colm"><h5>APPROVED <i>1</i></h5>
+      <div class="tk"><span class="id">T-0139</span><span class="pill">docs-site</span><p>Add a changelog page</p><small><span class="auto">Auto-approved</span> not counted in the badge</small></div>
+    </div>
+    <div class="colm"><h5>DOING <i>1</i></h5>
+      <div class="tk"><span class="id">T-0137</span><span class="pill">shop-web</span><p>Coupon codes</p></div>
+    </div>
+    <div class="colm"><h5>REVIEW <i>0</i></h5><small class="m">Nothing here</small></div>
+    <div class="colm"><h5>DONE <i>1</i></h5>
+      <div class="tk"><span class="id">T-0135</span><span class="pill">booking-api</span><p>Pricing engine</p></div>
+    </div>
+  </div>
+  <div class="sb"><span>Helme v0.5.33 · Latest version</span></div>
+</section>
+
+<!-- v0.5.34: clickable file paths and Export PDF (GitHub release asset) -->
+<section class="shot" id="v0-5-34">
+  <div class="tb"><span class="on">Coordination</span><span>Tickets</span><span class="x">shop-web</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="main" style="grid-template-columns: 1fr 1.2fr">
+    <div class="pane"><div class="ph">Chief of Staff</div><pre><span class="y">you ›</span> compare the two checkout designs
+
+<span class="o">● Chief of Staff</span>
+  Report written:
+  <span class="ul">reports/chief/checkout-designs.md</span>
+  Short answer: design B, fewer steps.
+  The screenshots are linked inside.
+
+<span class="y">you ›</span> <span class="cur"></span></pre></div>
+    <div class="rp">
+      <div class="rpt"><span>Status</span><span class="on">Reports</span><em>Updated 10:48</em></div>
+      <div class="reader" style="margin-bottom:12px">
+        <div class="rh"><b>Checkout designs for shop-web</b><span class="sp"></span><span class="bt">Export PDF</span><span class="bt">Expand</span></div>
+        <div class="doc">
+          <h2>Checkout designs for shop-web</h2>
+          <p><b>Answer:</b> design B. Three steps instead of five.</p>
+          <h3>Files</h3>
+          <ul>
+            <li>Design A: <span class="ul">../designs/checkout-a.png</span></li>
+            <li>Design B: <span class="ul">../designs/checkout-b.png</span></li>
+            <li>The page today: <span class="ul">shop-web/app/checkout/page.tsx</span> <span class="m">(read only)</span></li>
+          </ul>
+          <h3>What you decide</h3>
+          <ul><li>Reply "B" to the Chief, or ask for changes.</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sb"><span>Helme v0.5.34 · Latest version</span></div>
+</section>
+
 <!-- v0.5.32: lanes and departments (GitHub release; the PNG is attached to the release, not kept here) -->
 <section class="shot" id="v0-5-32">
   <div class="tb"><span>Coordination</span><span>Tickets</span><span class="on x">shop-web</span><span class="x">mobile-app</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
