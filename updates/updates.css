@@ -94,7 +94,7 @@
   }
   .rel-list::-webkit-scrollbar { display: none; }
   .rel-item { flex: none; border: 1px solid var(--line-2); border-radius: var(--radius-md); padding: 6px 14px; margin: 0; }
-  .rel-item.on { background: var(--fg); border-color: var(--fg); }
+  .rel-item.on { background: var(--accent); border-color: var(--accent); }
   .rel-item.on .ri-ver { color: var(--on-accent); }
   .rel-item.on .badge { background: var(--on-accent); color: var(--success); }
   .ri-date, .ri-title { display: none; }
