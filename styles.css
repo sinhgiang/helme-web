@@ -292,3 +292,5 @@ h3 { font-size: 20px; letter-spacing: -.02em; font-weight: 600; }
   html { scroll-behavior: auto; }
   .cursor { animation: none; }
 }
+
+.brand .mark { flex: none; display: block; }
