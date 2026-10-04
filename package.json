@@ -1,0 +1,8 @@
+{
+  "name": "helme-web",
+  "private": true,
+  "description": "The Helme website: a static site, no build step.",
+  "scripts": {
+    "test": "node --test \"tests/*.test.mjs\""
+  }
+}

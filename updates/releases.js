@@ -1,5 +1,7 @@
-// Helme release notes shown on /updates. Newest first: add a new release at the TOP of the list.
-// See README.md ("Adding a release") for the steps and the screenshot.
+// Helme release notes shown on /updates, for the versions up to v0.5.28. Newer versions are
+// GitHub releases of sinhgiang/helme-web and appear on the page by themselves, without a code
+// change: see README.md ("Adding a release"). Edit this file only to correct an older entry.
+// A GitHub release with the same version replaces the entry here.
 //
 // Fields:
 //   version   "v0.5.28" (the highest version this entry covers)

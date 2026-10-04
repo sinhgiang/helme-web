@@ -417,5 +417,41 @@
   <div class="sb"><span>Helme v0.5.28 · Latest version</span></div>
 </section>
 
+<!-- v0.5.32: lanes and departments (GitHub release; the PNG is attached to the release, not kept here) -->
+<section class="shot" id="v0-5-32">
+  <div class="tb"><span>Coordination</span><span>Tickets</span><span class="on x">shop-web</span><span class="x">mobile-app</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="main cols3">
+    <div class="pane"><div class="ph">shop-web <em>Manager</em></div><pre><span class="o">●</span> Coupon codes: front end and
+  API in parallel, then a check.
+  <span class="m">$</span> <span class="y">helme department</span> security
+    "Check the coupon API for abuse"
+
+<span class="m">[helme] security finished its turn:</span>
+  <span class="g">✓</span> Codes are single use
+  <span class="g">✓</span> Rate limit on redeem
+  <span class="a">!</span> Add an expiry date check
+
+<span class="o">●</span> Sending the expiry check to
+  the back lane.</pre></div>
+    <div class="pane"><div class="ph">shop-web · front <em>Lane</em></div><pre><span class="m">worktree  helme/lane-front</span>
+<span class="m">writes    web/ only</span>
+
+<span class="o">●</span> Coupon field on checkout
+  <span class="g">+ Apply button and message</span>
+  <span class="g">+ Error for an expired code</span>
+<span class="o">●</span> npm test
+  <span class="g">✓ 51 passed</span></pre></div>
+    <div class="pane"><div class="ph">shop-web · back <em>Lane</em></div><pre><span class="m">worktree  helme/lane-back</span>
+<span class="m">writes    api/ only</span>
+
+<span class="o">●</span> POST /coupons/redeem
+  <span class="g">+ single use per order</span>
+  <span class="g">+ expiry date check</span>
+<span class="o">●</span> npm test
+  <span class="g">✓ 37 passed</span></pre></div>
+  </div>
+  <div class="sb"><span>Helme v0.5.32 · Latest version</span></div>
+</section>
+
 </body>
 </html>
