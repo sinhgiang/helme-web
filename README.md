@@ -233,7 +233,8 @@ No. This repository holds the website only. Helme's own source is in a separate,
 | Layer | Technology |
 |---|---|
 | Pages | Static HTML and CSS, no framework and no build step |
-| Updates page | A small script that renders `updates/releases.js` |
+| Updates page | A small script that reads the [GitHub releases](https://github.com/sinhgiang/helme-web/releases) of this repository in the browser and merges them with the older entries in `updates/releases.js` |
+| Tests | Node.js test runner; the page test drives headless Microsoft Edge or Chrome against a fake GitHub API |
 | Type | Geist and Geist Mono (Google Fonts) |
 | Screenshots | Helme windows drawn in HTML, rendered to PNG with headless Microsoft Edge or Chrome (`updates/shots/render.mjs`, Node.js) |
 | Hosting | Vercel, with a preview deployment for every pushed branch |
@@ -256,12 +257,15 @@ index.html, styles.css     the home page
 favicon.svg                the Helme mark
 og.png, og/og.html         the share preview image and its HTML source
 updates/                   the Updates page
-  releases.js              the release notes, newest first
+  releases.js              the notes of the versions up to v0.5.28 (newer ones are GitHub releases)
+  releases-core.js         reads GitHub releases and merges them with releases.js
   index.html, updates.js, updates.css
   shots/source.html        every release screenshot, drawn in HTML with sample data
   shots/shot.css           styles of the screenshots
   shots/render.mjs         renders shots/<id>.png from source.html
-  shots/*.png              the rendered screenshots
+  shots/*.png              the rendered screenshots of the older versions
+tests/                     npm test: unit tests, and a page test with a fake GitHub API
+package.json               only the test script; the site has no dependencies
 vercel.json                trailingSlash, so /updates becomes /updates/
 ```
 
@@ -280,38 +284,79 @@ npx serve .
 
 Then open the address it prints. There is nothing to install or build. Push a branch to get a Vercel preview.
 
+Run the tests with `npm test` (Node.js 22 or newer). The page test needs Microsoft Edge or Chrome and is
+skipped without one.
+
+
 ## Adding a release to the Updates page
 
-When Helme gets a new version (for example `v0.5.29`):
+Every new Helme version gets its own entry on [/updates](https://helme-web.vercel.app/updates/) **without a
+code change and without a merge**: the page reads the
+[GitHub releases](https://github.com/sinhgiang/helme-web/releases) of this repository in the visitor's browser.
+An agent publishes the release with `gh`, and the entry is live as soon as the release exists.
 
-1. **Write the notes.** Read the new version's tag and its entry in Helme's development log. Add a new object
-   at the **top** of `window.HELME_RELEASES` in `updates/releases.js`:
+Do this after every new Helme version (the version is in Helme's `package.json`; what changed is in its
+development log). One release may cover several small versions.
 
-   ```js
-   {
-     version: "v0.5.29",
-     includes: "v0.5.29",            // optional: smaller versions folded into this entry
-     date: "2026-10-04",
-     title: "One line about what this release is for",
-     summary: "One or two sentences for someone who does not code.",
-     new: ["..."],                   // leave out a list that would be empty
-     improved: ["..."],
-     fixed: ["..."],
-     shot: { src: "shots/v0-5-29.png", alt: "What the picture shows" },
-   },
-   ```
+**1. Write the notes** in a Markdown file, in English, for someone who does not code:
 
-   Write in English for the reader. Use only sample project names (or the four public products: Wispra,
-   Lenvid, Revova, Timio). No paths from a PC, no internal ticket numbers, no names of people. The first entry
-   gets the **Latest** badge by itself. Several small versions may share one entry: name the highest version
-   in `version` and the rest in `includes`.
+```markdown
+One or two sentences: what this release means for the owner.
 
-2. **Draw the screenshot.** In `updates/shots/source.html`, copy the last `<section class="shot">`, set its
-   `id` to the version with dashes (`v0-5-29`), set the status bar to `Helme v0.5.29 · Latest version`, and
-   change the content to show the new feature with sample data. The classes are in `updates/shots/shot.css`.
+Includes v0.5.33 – v0.5.34
 
-3. **Render it.** `node updates/shots/render.mjs v0-5-29` writes `updates/shots/v0-5-29.png` (1800 × 1080).
-   Open the PNG and check it: sample data only, no paths, no real names.
+### New
+- One line per feature.
 
-4. **Check and publish.** Open `updates/index.html#v0.5.29` in a browser, at desktop and phone width. Commit on
-   a `helme/...` branch, push, and check the Vercel preview before production.
+### Improved
+- ...
+
+### Fixed
+- ...
+```
+
+- The first paragraph is the summary. `Includes ...` is optional: the smaller versions this release also covers.
+- Only the headings `New`, `Improved` and `Fixed` are shown; leave out a heading that would be empty. Items are
+  `- ` lines; `code` in backticks is shown as code.
+- Use only sample project names (shop-web, mobile-app, booking-api, docs-site, analytics, landing) or the four
+  public products (Wispra, Lenvid, Revova, Timio). No paths from a PC, no internal ticket numbers, no names of
+  people, nothing Helme does not do yet.
+
+**2. Draw the screenshot.** In `updates/shots/source.html`, copy the last `<section class="shot">`, set its `id`
+to the version with dashes (`v0-5-34`), set the status bar to `Helme v0.5.34 · Latest version`, and show the new
+feature with sample data (the classes are in `updates/shots/shot.css`). Render it outside the repository and
+name it `screenshot.png`:
+
+```
+node updates/shots/render.mjs --out <temp folder> v0-5-34
+```
+
+Then rename `<temp folder>/v0-5-34.png` to `screenshot.png`, open it and check it: sample data only, no paths,
+no real names. The edit to `source.html` does not need to be merged; keep it on a `helme/...` branch if you want
+a record.
+
+**3. Publish the release** (title: the version, a colon, one line about the release; the text after `#` is the
+picture's description):
+
+```
+gh release create v0.5.34 --repo sinhgiang/helme-web --target main \
+  --title "v0.5.34: One line about this release" \
+  --notes-file notes.md \
+  "<temp folder>/screenshot.png#What the picture shows"
+```
+
+**4. Check it.** Open https://helme-web.vercel.app/updates/: the new version is at the top with **Latest**
+(the browser keeps the list for up to five minutes, so a new tab may be needed).
+
+How the page uses releases:
+
+- Only published releases whose tag is a version (`v1.2.3`) appear. Drafts and pre-releases do not, so
+  `gh release create ... --draft` lets you look at a release on GitHub before it goes on the page.
+- The picture is the release asset named `screenshot.png`; its label is the alt text.
+- To correct an entry, edit the release (`gh release edit v0.5.34 --notes-file notes.md`, or
+  `gh release upload v0.5.34 "screenshot.png#..." --clobber` for the picture). To remove it,
+  `gh release delete v0.5.34 --cleanup-tag`.
+- The versions up to v0.5.28 are in `updates/releases.js` and stay as they are. A release with the same version
+  replaces the entry from that file.
+- If GitHub cannot be reached (for example its limit of 60 requests an hour per visitor), the page shows the
+  entries from `releases.js` only.
