@@ -244,6 +244,8 @@ h3 { font-size: 20px; letter-spacing: -.02em; font-weight: 600; }
 .closing { padding: 140px 0; text-align: center; border-bottom: 1px solid var(--line); }
 .center { justify-content: center; }
 
+.foot-links { display: flex; gap: 20px; color: var(--dim); }
+.foot-links a:hover { color: var(--fg); }
 .foot-in { display: flex; justify-content: space-between; align-items: center; padding-top: 32px; padding-bottom: 40px; font-size: 13px; gap: 16px; flex-wrap: wrap; }
 
 /* Tablet */
