@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://helme-web.vercel.app"><img src="favicon.svg" alt="Helme" width="96" height="96"></a>
+  <a href="https://helme-web.vercel.app"><img src="logo.svg" alt="Helme" width="96" height="96"></a>
 </p>
 
 <h1 align="center">Helme</h1>
@@ -254,7 +254,7 @@ No. This repository holds the website only. Helme's own source is in a separate,
 
 ```
 index.html, styles.css     the home page
-favicon.svg                the Helme mark
+logo.svg, favicon.svg       the Helme mark (the captain’s wheel) and the favicon
 og.png, og/og.html         the share preview image and its HTML source
 updates/                   the Updates page
   releases.js              the notes of the versions up to v0.5.28 (newer ones are GitHub releases)
