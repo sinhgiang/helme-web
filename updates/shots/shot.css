@@ -110,3 +110,18 @@ pre { font-family: var(--mono); font-size: 13px; line-height: 1.55; color: #cccc
 .detail h3 { font-size: 16px; margin: 4px 0 12px; }
 .detail .sub { color: var(--muted); font-size: 12px; margin-top: 14px; margin-bottom: 6px; text-transform: uppercase; letter-spacing: .06em; }
 .tk.hl { border-color: var(--blue); box-shadow: 0 0 0 2px rgba(59,142,234,.3); }
+
+/* v0.5.91+ */
+.qa { margin: 10px 12px; border: 1px solid var(--amber); border-radius: 6px; padding: 10px 12px; font-family: var(--mono); font-size: 13px; line-height: 1.6; color: #ddd; }
+.qa .opt { display: block; color: var(--dim); }
+.qa .opt.sel { color: #fff; }
+.road { padding: 8px 0 12px; border-bottom: 1px solid #1f1f1f; }
+.road .top { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+.road .top b { color: #eee; } .road .top .rt { margin-left: auto; color: var(--dim); font-size: 12px; }
+.bar { display: flex; gap: 3px; height: 10px; }
+.bar i { flex: 1; border-radius: 3px; background: #2a2a2a; position: relative; overflow: hidden; }
+.bar i b { position: absolute; inset: 0 auto 0 0; background: var(--green); }
+.bar i.now b { background: var(--blue); }
+.road .st { display: flex; gap: 3px; margin-top: 5px; font-size: 11px; color: var(--muted); }
+.road .st span { flex: 1; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.road .st span.now { color: #9cc3ee; }
