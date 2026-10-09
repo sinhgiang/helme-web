@@ -123,3 +123,85 @@ test("merge without GitHub data is the local list, newest first", () => {
   const local = localEntries();
   assert.deepEqual(core.merge(local, []).map((e) => e.version), local.map((e) => e.version));
 });
+
+// A fake GitHub releases API: `total` releases, newest first, served page by page like GitHub does.
+function fakeGitHub(total, { failPage, badPage } = {}) {
+  const all = Array.from({ length: total }, (_, i) =>
+    release({ tag_name: `v1.${Math.floor((total - 1 - i) / 1000)}.${(total - 1 - i) % 1000}`, name: `Release ${total - 1 - i}` }));
+  const calls = [];
+  const fetchFn = async (url) => {
+    const u = new URL(url);
+    calls.push(u.search);
+    const page = Number(u.searchParams.get("page") || 1);
+    const per = Number(u.searchParams.get("per_page") || 30);
+    if (page === failPage) return { ok: false, status: 403, json: async () => ({ message: "API rate limit exceeded" }) };
+    if (page === badPage) return { ok: true, status: 200, json: async () => ({ message: "Not a list" }) };
+    return { ok: true, status: 200, json: async () => all.slice((page - 1) * per, page * per) };
+  };
+  return { all, calls, fetchFn };
+}
+
+test("fetchAll reads every page when there are more than 100 releases", async () => {
+  const gh = fakeGitHub(250);
+  const got = await core.fetchAll(core.API_URL, gh.fetchFn);
+  assert.equal(got.complete, true);
+  assert.equal(got.releases.length, 250);
+  assert.deepEqual(gh.calls, ["?per_page=100&page=1", "?per_page=100&page=2", "?per_page=100&page=3"]);
+  assert.deepEqual(got.releases.map((r) => r.tag_name), gh.all.map((r) => r.tag_name));
+  const merged = core.merge(localEntries(), got.releases);
+  assert.equal(merged.length, 250 + 12, "every GitHub release and every local entry");
+  assert.equal(merged[0].version, "v1.0.249");
+  assert.equal(merged[249].version, "v1.0.0", "the oldest GitHub release is still listed");
+});
+
+test("fetchAll stops after a short page, also when the last page is exactly full", async () => {
+  const small = fakeGitHub(70);
+  assert.equal((await core.fetchAll(core.API_URL, small.fetchFn)).releases.length, 70);
+  assert.equal(small.calls.length, 1);
+
+  const full = fakeGitHub(200);
+  const got = await core.fetchAll(core.API_URL, full.fetchFn);
+  assert.equal(got.complete, true);
+  assert.equal(got.releases.length, 200);
+  assert.equal(full.calls.length, 3, "page 3 is empty and ends the loop");
+});
+
+test("fetchAll keeps the pages it read when a later page fails", async () => {
+  const limited = fakeGitHub(250, { failPage: 2 });
+  const got = await core.fetchAll(core.API_URL, limited.fetchFn);
+  assert.equal(got.complete, false);
+  assert.equal(got.releases.length, 100);
+
+  const bad = fakeGitHub(250, { badPage: 3 });
+  const got2 = await core.fetchAll(core.API_URL, bad.fetchFn);
+  assert.equal(got2.complete, false);
+  assert.equal(got2.releases.length, 200);
+});
+
+test("fetchAll fails when the first page fails, so the page keeps the local entries", async () => {
+  await assert.rejects(core.fetchAll(core.API_URL, fakeGitHub(10, { failPage: 1 }).fetchFn), /GitHub 403/);
+  await assert.rejects(core.fetchAll(core.API_URL, fakeGitHub(10, { badPage: 1 }).fetchFn), /no list/);
+  await assert.rejects(core.fetchAll(core.API_URL, async () => { throw new TypeError("offline"); }), /offline/);
+});
+
+test("fetchAll stops at MAX_PAGES when every page is full", async () => {
+  let calls = 0;
+  const endless = async () => { calls++; return { ok: true, json: async () => Array.from({ length: 100 }, () => release()) }; };
+  const got = await core.fetchAll(core.API_URL, endless);
+  assert.equal(calls, core.MAX_PAGES);
+  assert.equal(got.complete, false);
+});
+
+test("pageUrl keeps the query of a test address and resolves it against the page", () => {
+  assert.equal(core.pageUrl("/fake-api/releases?limited", 2, "http://127.0.0.1:5000/updates/"),
+    "http://127.0.0.1:5000/fake-api/releases?limited=&per_page=100&page=2");
+  assert.equal(core.pageUrl(core.API_URL, 1), "https://api.github.com/repos/sinhgiang/helme-web/releases?per_page=100&page=1");
+});
+
+test("slim keeps what fromGitHub reads", () => {
+  const full = release({ author: { login: "someone" }, assets: [{ name: "screenshot.png", label: "L", browser_download_url: "https://example.test/s.png", uploader: {}, size: 1 }] });
+  const s = core.slim(full);
+  assert.equal(s.author, undefined);
+  assert.deepEqual(s.assets, [{ name: "screenshot.png", label: "L", browser_download_url: "https://example.test/s.png" }]);
+  assert.deepEqual(core.fromGitHub(s), core.fromGitHub(full));
+});

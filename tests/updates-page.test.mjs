@@ -23,13 +23,20 @@ let server;
 let base;
 let releases = [];
 let apiStatus = 200;
+let failPage = 0;
+const pagesAsked = [];
 
 before(async () => {
   server = createServer(async (req, res) => {
     const url = new URL(req.url, "http://x");
     if (url.pathname === "/fake-api/releases") {
-      res.writeHead(apiStatus, { "content-type": "application/json", "access-control-allow-origin": "*" });
-      return res.end(JSON.stringify(apiStatus === 200 ? releases : { message: "API rate limit exceeded" }));
+      // Pages like GitHub: per_page (default 30, at most 100) and page (from 1).
+      const per = Math.min(Number(url.searchParams.get("per_page") || 30), 100);
+      const page = Number(url.searchParams.get("page") || 1);
+      pagesAsked.push(page);
+      const status = page === failPage ? 403 : apiStatus;
+      res.writeHead(status, { "content-type": "application/json", "access-control-allow-origin": "*" });
+      return res.end(JSON.stringify(status === 200 ? releases.slice((page - 1) * per, page * per) : { message: "API rate limit exceeded" }));
     }
     let path = decodeURIComponent(url.pathname);
     if (path.endsWith("/")) path += "index.html";
@@ -92,6 +99,46 @@ test("a new GitHub release appears on top with its notes and screenshot", { skip
   assert.match(html, /<code>gh release create<\/code>/);
   assert.match(html, /<img src="\/updates\/shots\/v0-5-28\.png" alt="Test screenshot with sample projects"/);
   assert.doesNotMatch(versions.slice(1).join(" "), /v9/);
+});
+
+// 130 releases, v2.0.129 (newest) down to v2.0.0, so GitHub needs two pages.
+const MANY = Array.from({ length: 130 }, (_, i) => ({
+  ...NEW_RELEASE,
+  tag_name: `v2.0.${129 - i}`,
+  name: `v2.0.${129 - i}: Release number ${129 - i}`,
+  assets: [],
+}));
+
+test("more than 100 GitHub releases: every one is listed", { skip: !BROWSER && "no Edge or Chrome" }, async () => {
+  releases = MANY;
+  apiStatus = 200;
+  failPage = 0;
+  pagesAsked.length = 0;
+  const api = encodeURIComponent(`${base}/fake-api/releases?many`);
+  const html = await dumpDom(`${base}/updates/?api=${api}#v2.0.0`);
+  const versions = listVersions(html);
+
+  assert.match(html, /data-releases="github"/);
+  assert.deepEqual(pagesAsked, [1, 2]);
+  assert.equal(versions.length, 130 + 12, "130 GitHub releases + 12 old entries");
+  assert.equal(versions[0], "v2.0.129");
+  assert.equal(versions[129], "v2.0.0", "the oldest GitHub release, on page 2, is listed");
+  assert.equal(versions.at(-1), "v0.1.0");
+  assert.match(text(html), /Release number 0 /, "the release from page 2 opens");
+});
+
+test("when page 2 fails, the releases of page 1 still show", { skip: !BROWSER && "no Edge or Chrome" }, async () => {
+  releases = MANY;
+  apiStatus = 200;
+  failPage = 2;
+  const api = encodeURIComponent(`${base}/fake-api/releases?page2fails`);
+  const html = await dumpDom(`${base}/updates/?api=${api}`);
+  failPage = 0;
+  const versions = listVersions(html);
+  assert.match(html, /data-releases="partial"/);
+  assert.equal(versions.length, 100 + 12);
+  assert.equal(versions[0], "v2.0.129");
+  assert.equal(versions.at(-1), "v0.1.0");
 });
 
 test("an old entry still opens with its own screenshot", { skip: !BROWSER && "no Edge or Chrome" }, async () => {

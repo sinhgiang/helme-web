@@ -155,24 +155,28 @@
   var CACHE_KEY = "helme-releases:" + api;
   var CACHE_MS = 5 * 60 * 1000;
 
-  function apply(data) {
+  // "github": every release was read; "partial": a later page failed, so the oldest GitHub releases
+  // may be missing until the next visit.
+  function apply(data, state) {
     if (!Array.isArray(data)) return;
     releases = core.merge(local, data);
     renderList();
     render(current());
-    document.documentElement.dataset.releases = "github";
+    document.documentElement.dataset.releases = state;
   }
 
   try {
     var cached = JSON.parse(sessionStorage.getItem(CACHE_KEY) || "null");
-    if (cached && Date.now() - cached.at < CACHE_MS) { apply(cached.data); return; }
+    if (cached && Date.now() - cached.at < CACHE_MS) { apply(cached.data, "github"); return; }
   } catch (e) { /* storage may be blocked */ }
 
-  fetch(api, { headers: { Accept: "application/vnd.github+json" } })
-    .then(function (res) { if (!res.ok) throw new Error("GitHub " + res.status); return res.json(); })
-    .then(function (data) {
-      try { sessionStorage.setItem(CACHE_KEY, JSON.stringify({ at: Date.now(), data: data })); } catch (e) {}
-      apply(data);
+  // GitHub sends at most 100 releases a page, so the page reads every page.
+  core.fetchAll(api, fetch.bind(window), location.href)
+    .then(function (got) {
+      if (got.complete) {
+        try { sessionStorage.setItem(CACHE_KEY, JSON.stringify({ at: Date.now(), data: got.releases })); } catch (e) {}
+      }
+      apply(got.releases, got.complete ? "github" : "partial");
     })
     .catch(function () {
       // Rate limit or offline: the entries from releases.js stay on screen.

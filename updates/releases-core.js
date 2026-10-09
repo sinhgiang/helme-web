@@ -6,7 +6,9 @@
   else root.HelmeReleases = core;
 })(typeof self !== "undefined" ? self : this, function () {
   var REPO = "sinhgiang/helme-web";
-  var API_URL = "https://api.github.com/repos/" + REPO + "/releases?per_page=100";
+  var API_URL = "https://api.github.com/repos/" + REPO + "/releases";
+  var PER_PAGE = 100; // the most GitHub returns in one page
+  var MAX_PAGES = 50; // a stop for a server that never sends a short page
   var TAG = /^v(\d+)\.(\d+)\.(\d+)$/;
   var SECTIONS = { new: "new", improved: "improved", fixed: "fixed" };
 
@@ -99,9 +101,67 @@
     });
   }
 
+  // The fields of a GitHub release that fromGitHub reads, so the cached list stays small.
+  function slim(rel) {
+    if (!rel || typeof rel !== "object") return rel;
+    return {
+      tag_name: rel.tag_name,
+      name: rel.name,
+      body: rel.body,
+      draft: rel.draft,
+      prerelease: rel.prerelease,
+      published_at: rel.published_at,
+      created_at: rel.created_at,
+      html_url: rel.html_url,
+      assets: (rel.assets || []).map(function (a) {
+        return a && { name: a.name, label: a.label, browser_download_url: a.browser_download_url };
+      }),
+    };
+  }
+
+  function pageUrl(api, page, base) {
+    var url = new URL(api, base);
+    url.searchParams.set("per_page", String(PER_PAGE));
+    url.searchParams.set("page", String(page));
+    return url.href;
+  }
+
+  // Every release, page by page, until GitHub sends a page with fewer than PER_PAGE releases.
+  // Resolves { releases, complete }. complete is false when a later page failed: the releases of the
+  // pages read so far are still returned. Rejects when the first page fails.
+  function fetchAll(api, fetchFn, base) {
+    var all = [];
+    function next(page) {
+      return fetchFn(pageUrl(api, page, base), { headers: { Accept: "application/vnd.github+json" } })
+        .then(function (res) {
+          if (!res.ok) throw new Error("GitHub " + res.status);
+          return res.json();
+        })
+        .then(function (data) {
+          if (!Array.isArray(data)) throw new Error("GitHub sent no list");
+          return data;
+        })
+        .then(function (data) {
+          data.forEach(function (r) { all.push(slim(r)); });
+          if (data.length < PER_PAGE) return { releases: all, complete: true };
+          if (page >= MAX_PAGES) return { releases: all, complete: false };
+          return next(page + 1);
+        }, function (err) {
+          if (page === 1) throw err;
+          return { releases: all, complete: false };
+        });
+    }
+    return next(1);
+  }
+
   return {
     REPO: REPO,
     API_URL: API_URL,
+    PER_PAGE: PER_PAGE,
+    MAX_PAGES: MAX_PAGES,
+    slim: slim,
+    pageUrl: pageUrl,
+    fetchAll: fetchAll,
     parseVersion: parseVersion,
     compareVersions: compareVersions,
     parseBody: parseBody,
