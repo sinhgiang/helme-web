@@ -417,6 +417,171 @@
   <div class="sb"><span>Helme v0.5.28 · Latest version</span></div>
 </section>
 
+<!-- v0.5.29: night shift on open projects (GitHub release asset) -->
+<section class="shot" id="v0-5-29">
+  <div class="tb"><span class="on">Coordination</span><span>Tickets</span><span class="x">shop-web</span><span class="x">docs-site</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="main cols2">
+    <div class="pane"><div class="ph">Chief of Staff</div><pre><span class="y">you ›</span> what did the night shift do?
+
+<span class="o">● Chief of Staff</span>
+  Both projects you left open got
+  night work, in a separate copy:
+  <span class="g">✓</span> shop-web   coupon codes, tests pass
+  <span class="g">✓</span> docs-site  FAQ page, review PASS
+  Your open panes and unsaved changes
+  were not touched.
+
+<span class="y">you ›</span> <span class="cur"></span></pre></div>
+    <div class="rp">
+      <div class="rpt"><span class="on">Status</span><span>Reports</span><em>Updated 06:32</em></div>
+      <div class="sec"><h4>Night shift</h4>
+        <div class="row"><span class="dot g"></span>23:00 Night work<span class="rt">2 projects · done 01:12</span></div>
+        <div class="row"><span class="m" style="padding-left:18px">shop-web</span><code>open in Helme → separate worktree</code><span class="rt">T-0131</span></div>
+        <div class="row"><span class="m" style="padding-left:18px">docs-site</span><code>uncommitted files → separate worktree</code><span class="rt">T-0132</span></div>
+        <div class="row"><span class="dot g"></span>02:00 Night review<span class="rt">done 02:19</span></div>
+        <div class="row"><span class="dot g"></span>06:30 Morning report<span class="rt">done 06:30</span></div>
+      </div>
+      <div class="sec"><h4>Open projects</h4>
+        <div class="row"><span class="dot g"></span><b>shop-web</b><code>helme/checkout · 2 changed</code><span class="rt">untouched</span></div>
+        <div class="row"><span class="dot g"></span><b>docs-site</b><code>helme/faq · 1 changed</code><span class="rt">untouched</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="sb"><span>Helme v0.5.29 · Latest version</span></div>
+</section>
+
+<!-- v0.5.30: model, effort and context per ticket (GitHub release asset) -->
+<section class="shot" id="v0-5-30">
+  <div class="tb"><span>Coordination</span><span class="on">Tickets</span><span class="x">shop-web</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="toolbar"><b>Tickets</b><span class="sel">All projects ▾</span><span class="m">T-0135: model and effort set by the Chief</span><span class="sp"></span><span class="bt pri">New ticket</span></div>
+  <div style="flex:1;display:flex;min-height:0">
+    <div class="board" style="grid-template-columns:repeat(4,1fr)">
+      <div class="colm"><h5>APPROVED <i>2</i></h5>
+        <div class="tk hl"><span class="id">T-0135</span><span class="pill">booking-api</span><p>Redesign the pricing engine</p><small>opus · effort max</small></div>
+        <div class="tk"><span class="id">T-0136</span><span class="pill">docs-site</span><p>Fix three typos</p><small>haiku · effort low</small></div>
+      </div>
+      <div class="colm"><h5>DOING <i>1</i></h5>
+        <div class="tk"><span class="id">T-0134</span><span class="pill">shop-web</span><p>Coupon codes</p><small>default · effort high</small></div>
+      </div>
+      <div class="colm"><h5>REVIEW <i>0</i></h5><small class="m">Nothing here</small></div>
+      <div class="colm"><h5>DONE <i>1</i></h5>
+        <div class="tk"><span class="id">T-0133</span><span class="pill">landing</span><p>New hero image</p></div>
+      </div>
+    </div>
+    <div class="detail">
+      <span class="id m" style="font-family:var(--mono)">T-0135</span><span class="pill">booking-api</span>
+      <h3>Redesign the pricing engine</h3>
+      <dl class="kv">
+        <dt>Model</dt><dd><code>opus</code></dd>
+        <dt>Effort</dt><dd><code>max</code></dd>
+        <dt>Context</dt><dd><code>standard</code></dd>
+        <dt>Priority</dt><dd>high</dd>
+      </dl>
+      <div class="sub">Log</div>
+      <pre style="padding:0;font-size:12px"><span class="m">09:02</span> Chief: hard task, set
+      model opus, effort max
+<span class="m">09:03</span> Helme typed /model and
+      /effort before the task
+<span class="m">--:--</span> Next task: back to defaults</pre>
+    </div>
+  </div>
+  <div class="sb"><span>Helme v0.5.30 · Latest version</span></div>
+</section>
+
+<!-- v0.5.31: several agents per project, each in its own worktree (GitHub release asset) -->
+<section class="shot" id="v0-5-31">
+  <div class="tb"><span>Coordination</span><span>Tickets</span><span class="on x">booking-api</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="main g4">
+    <div class="pane"><div class="ph">booking-api <em>Main agent</em></div><pre><span class="m">folder    booking-api</span>
+<span class="m">branch    helme/search-speed</span>
+
+<span class="o">●</span> Faster hotel search
+  <span class="g">✓</span> Index on city and date
+  <span class="g">✓</span> 64 tests passed</pre></div>
+    <div class="pane"><div class="ph">booking-api · web <em>Lane</em></div><pre><span class="m">worktree  helme/lane-web</span>
+<span class="m">writes    web/ only</span>
+
+<span class="o">●</span> New booking calendar
+  <span class="g">+ Month view</span>
+  <span class="g">+ Keyboard navigation</span></pre></div>
+    <div class="pane"><div class="ph">booking-api · api <em>Lane</em></div><pre><span class="m">worktree  helme/lane-api</span>
+<span class="m">writes    api/ only</span>
+
+<span class="o">●</span> GET /availability
+  <span class="g">✓</span> 21 tests passed
+<span class="r">✕</span> Blocked: write to web/ is
+  outside this lane</pre></div>
+    <div class="pane"><div class="ph">Chief of Staff</div><pre><span class="m">$</span> <span class="y">helme open</span> booking-api --lane web
+<span class="m">$</span> <span class="y">helme open</span> booking-api --lane api
+<span class="m">$</span> <span class="y">helme send</span> booking-api --lane web
+    "Build the month view"
+
+<span class="m">$</span> <span class="y">helme lanes clean</span>
+  Removed 1 finished worktree,
+  kept its branch.</pre></div>
+  </div>
+  <div class="sb"><span>Helme v0.5.31 · Latest version</span></div>
+</section>
+
+<!-- v0.5.33: badge on the Tickets tab (GitHub release asset) -->
+<section class="shot" id="v0-5-33">
+  <div class="tb"><span>Coordination</span><span class="on">Tickets <b class="bub">3</b></span><span class="x">shop-web</span><span class="x">mobile-app</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="toolbar"><b>Tickets</b><span class="sel">All projects ▾</span><span class="m">3 tickets wait for your approval</span><span class="sp"></span><span class="bt pri">New ticket</span></div>
+  <div class="board">
+    <div class="colm"><h5>PROPOSED <i>3</i></h5>
+      <div class="tk hl"><span class="id">T-0142</span><span class="pill">analytics</span><p>Raise the ad budget for the launch week</p><small>Waits for you: touches money</small><div style="margin-top:6px;display:flex;gap:6px"><span class="bt pri">Approve</span><span class="bt">Reject</span></div></div>
+      <div class="tk"><span class="id">T-0141</span><span class="pill">mobile-app</span><p>Send the release to the app store</p><small>Waits for you: release</small></div>
+      <div class="tk"><span class="id">T-0140</span><span class="pill">shop-web</span><p>Email customers about the new checkout</p><small>Waits for you: sending to people</small></div>
+    </div>
+    <div class="colm"><h5>APPROVED <i>1</i></h5>
+      <div class="tk"><span class="id">T-0139</span><span class="pill">docs-site</span><p>Add a changelog page</p><small><span class="auto">Auto-approved</span> not counted in the badge</small></div>
+    </div>
+    <div class="colm"><h5>DOING <i>1</i></h5>
+      <div class="tk"><span class="id">T-0137</span><span class="pill">shop-web</span><p>Coupon codes</p></div>
+    </div>
+    <div class="colm"><h5>REVIEW <i>0</i></h5><small class="m">Nothing here</small></div>
+    <div class="colm"><h5>DONE <i>1</i></h5>
+      <div class="tk"><span class="id">T-0135</span><span class="pill">booking-api</span><p>Pricing engine</p></div>
+    </div>
+  </div>
+  <div class="sb"><span>Helme v0.5.33 · Latest version</span></div>
+</section>
+
+<!-- v0.5.34: clickable file paths and Export PDF (GitHub release asset) -->
+<section class="shot" id="v0-5-34">
+  <div class="tb"><span class="on">Coordination</span><span>Tickets</span><span class="x">shop-web</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="main" style="grid-template-columns: 1fr 1.2fr">
+    <div class="pane"><div class="ph">Chief of Staff</div><pre><span class="y">you ›</span> compare the two checkout designs
+
+<span class="o">● Chief of Staff</span>
+  Report written:
+  <span class="ul">reports/chief/checkout-designs.md</span>
+  Short answer: design B, fewer steps.
+  The screenshots are linked inside.
+
+<span class="y">you ›</span> <span class="cur"></span></pre></div>
+    <div class="rp">
+      <div class="rpt"><span>Status</span><span class="on">Reports</span><em>Updated 10:48</em></div>
+      <div class="reader" style="margin-bottom:12px">
+        <div class="rh"><b>Checkout designs for shop-web</b><span class="sp"></span><span class="bt">Export PDF</span><span class="bt">Expand</span></div>
+        <div class="doc">
+          <h2>Checkout designs for shop-web</h2>
+          <p><b>Answer:</b> design B. Three steps instead of five.</p>
+          <h3>Files</h3>
+          <ul>
+            <li>Design A: <span class="ul">../designs/checkout-a.png</span></li>
+            <li>Design B: <span class="ul">../designs/checkout-b.png</span></li>
+            <li>The page today: <span class="ul">shop-web/app/checkout/page.tsx</span> <span class="m">(read only)</span></li>
+          </ul>
+          <h3>What you decide</h3>
+          <ul><li>Reply "B" to the Chief, or ask for changes.</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sb"><span>Helme v0.5.34 · Latest version</span></div>
+</section>
+
 <!-- v0.5.32: lanes and departments (GitHub release; the PNG is attached to the release, not kept here) -->
 <section class="shot" id="v0-5-32">
   <div class="tb"><span>Coordination</span><span>Tickets</span><span class="on x">shop-web</span><span class="x">mobile-app</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
@@ -451,6 +616,680 @@
   <span class="g">✓ 37 passed</span></pre></div>
   </div>
   <div class="sb"><span>Helme v0.5.32 · Latest version</span></div>
+</section>
+
+<!-- v0.5.91: trust question on a new project (GitHub release asset) -->
+<section class="shot" id="v0-5-91">
+  <div class="tb"><span class="on">Coordination</span><span>Tickets</span><span class="x">new-shop</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="main cols2">
+    <div class="pane"><div class="ph">new-shop <em class="a">Waits for you: trust the folder</em></div>
+      <div class="qa">Quick safety check: Is this a project you
+created or one you trust?
+<span class="opt">  1. No, exit</span><span class="opt sel">› 2. Yes, I trust this folder</span></div>
+      <pre><span class="m">Queued for this agent (1)
+  "Set up the product list page"
+  goes in by itself once you answer</span></pre></div>
+    <div class="rp">
+      <div class="rpt"><span class="on">Status</span><span>Reports</span><em>Updated 10:02</em></div>
+      <div class="sec"><h4>Needs your decision <span class="cnt">1</span></h4>
+        <div class="item"><span class="t">Trust the folder of new-shop so its agent can start<small>Choose "Yes, I trust this folder", then Enter. Helme never answers for you.</small></span><span class="bt pri">Open pane</span><span class="lk">How to</span></div>
+      </div>
+      <div class="sec"><h4>Open projects</h4>
+        <div class="row"><span class="dot y"></span><b>new-shop</b><code>main</code><span class="rt">Waits for you: trust the folder</span></div>
+        <div class="row"><span class="dot g"></span><b>shop-web</b><code>helme/coupons</code><span class="rt">Working</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="sb"><span>Helme v0.5.91 · Latest version</span></div>
+</section>
+
+<!-- v0.5.92: roadmaps (GitHub release asset) -->
+<section class="shot" id="v0-5-92">
+  <div class="tb"><span>Coordination</span><span>Tickets</span><span class="on">Analytics</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="rp" style="flex:1">
+    <div class="sec" style="padding:16px 22px">
+      <h4>Roadmaps</h4>
+      <div class="road"><div class="top"><b>shop-web</b><span class="m">Stage 3 of 4: Checkout</span><span class="rt">62%</span></div>
+        <div class="bar"><i><b style="width:100%"></b></i><i><b style="width:100%"></b></i><i class="now"><b style="width:45%"></b></i><i></i></div>
+        <div class="st"><span>Catalogue</span><span>Cart</span><span class="now">Checkout</span><span>Launch</span></div></div>
+      <div class="road"><div class="top"><b>mobile-app</b><span class="m">Stage 2 of 3: Sign-in</span><span class="rt">40%</span></div>
+        <div class="bar"><i><b style="width:100%"></b></i><i class="now"><b style="width:30%"></b></i><i></i></div>
+        <div class="st"><span>First build</span><span class="now">Sign-in</span><span>App store</span></div></div>
+      <div class="road"><div class="top"><b>booking-api</b><span class="m">Stage 4 of 4: Speed</span><span class="rt">88%</span></div>
+        <div class="bar"><i><b style="width:100%"></b></i><i><b style="width:100%"></b></i><i><b style="width:100%"></b></i><i class="now"><b style="width:60%"></b></i></div>
+        <div class="st"><span>Search</span><span>Booking</span><span>Payments</span><span class="now">Speed</span></div></div>
+      <div class="road" style="border:0"><div class="top"><b>docs-site</b><span class="m">Stage 1 of 2: Guides</span><span class="rt">25%</span></div>
+        <div class="bar"><i class="now"><b style="width:50%"></b></i><i></i></div>
+        <div class="st"><span class="now">Guides</span><span>Search</span></div></div>
+    </div>
+    <div class="sec" style="padding:0 22px">
+      <h4>shop-web · Checkout</h4>
+      <div class="row"><span class="g">✓</span>T-0151 Delivery options<span class="rt">Done</span></div>
+      <div class="row"><span class="dot g"></span>T-0152 Coupon codes<span class="rt">Doing</span></div>
+      <div class="row"><span class="m">·</span>T-0153 Order email<span class="rt">Approved</span></div>
+      <div class="row"><span class="m">·</span><span class="m">Gift cards (not a ticket yet)</span></div>
+    </div>
+  </div>
+  <div class="sb"><span>Helme v0.5.92 · Latest version</span></div>
+</section>
+
+<!-- v0.5.93: AI accounts with Log in (GitHub release asset) -->
+<section class="shot" id="v0-5-93">
+  <div class="tb"><span class="on">Coordination</span><span>Tickets</span><span class="x">shop-web</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="main cols2">
+    <div class="pane"><div class="ph">Chief of Staff</div><pre><span class="y">you ›</span> which accounts can the agents use?
+
+<span class="o">● Chief of Staff</span>
+  Three are listed in your accounts list:
+  main work, light work, and Cursor.
+  "light" needs a login: press Log in
+  next to it on the right. It opens a
+  window of its own; I never see the
+  password.
+
+<span class="y">you ›</span> <span class="cur"></span></pre></div>
+    <div class="rp">
+      <div class="rpt"><span class="on">Status</span><span>Reports</span><em>Updated 09:21</em></div>
+      <div class="sec"><h4>Accounts</h4>
+        <div class="row"><span class="dot g"></span><b>claude-main</b><span class="m">main work</span><span class="rt">Logged in as owner@example.com</span></div>
+        <div class="row"><span class="dot y"></span><b>claude-light</b><span class="m">light and background work</span><span class="rt">Needs login</span><span class="bt pri">Log in</span></div>
+        <div class="row"><span class="dot r"></span><b>cursor</b><span class="m">second opinion</span><span class="rt">Wrong account: someone@example.com</span><span class="bt">Log in</span></div>
+        <div style="margin-top:10px;display:flex;gap:10px;align-items:center"><span class="m">Checked 09:21</span><span class="lk">accounts.md</span><span style="margin-left:auto" class="bt">Check again</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="sb"><span>Helme v0.5.93 · Latest version</span></div>
+</section>
+
+<!-- v0.5.94: agents check their work in a browser (GitHub release asset) -->
+<section class="shot" id="v0-5-94">
+  <div class="tb"><span>Coordination</span><span>Tickets</span><span class="on x">shop-web</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="main cols2">
+    <div class="pane"><div class="ph">shop-web</div><pre><span class="o">●</span> Coupon field finished, checking it
+  in the browser before reporting.
+<span class="o">●</span> <span class="b">helme-browser</span> open the preview
+  https://shop-web-git-coupons.example.app
+<span class="o">●</span> <span class="b">helme-browser</span> fill "SPRING10",
+  click Apply
+  <span class="g">✓</span> Total drops from $40.00 to $36.00
+<span class="o">●</span> <span class="b">helme-browser</span> console
+  <span class="g">✓</span> 0 errors, 0 warnings
+<span class="o">●</span> <span class="b">helme-browser</span> screenshots
+  <span class="g">✓</span> computer 1440 px, phone 390 px
+<span class="o">●</span> Status file updated with the
+  preview, the check and two pictures.</pre></div>
+    <div class="rp">
+      <div class="rpt"><span>Status</span><span>Reports</span><span class="on">System</span><em>Updated 11:05</em></div>
+      <div class="sec"><h4>Connections</h4>
+        <div class="row"><span class="dot g"></span><b>GitHub</b><span class="rt">Connected</span></div>
+        <div class="row"><span class="dot g"></span><b>Vercel</b><span class="rt">Connected</span></div>
+        <div class="row"><span class="dot g"></span><b>Helme browser</b><span class="m">hidden Chrome of Helme's own</span><span class="rt">Logged in to Vercel</span><span class="bt">Check</span><span class="bt">Forget Vercel login</span></div>
+      </div>
+      <div class="sec"><h4>What each agent may open</h4>
+        <div class="row"><b>shop-web</b><span class="rt">its app on this PC, its Vercel previews</span></div>
+        <div class="row"><b>Reviewer</b><span class="rt">look only: no click, no typing</span></div>
+        <div class="row"><b>Live site</b><span class="rt">look and measure, never send a form</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="sb"><span>Helme v0.5.94 · Latest version</span></div>
+</section>
+
+<!-- v0.5.95: one button, one line (GitHub release asset) -->
+<section class="shot" id="v0-5-95">
+  <div class="tb"><span class="on">Coordination</span><span>Tickets</span><span class="x">shop-web</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="main cols2">
+    <div class="pane"><div class="ph">Chief of Staff <em>Busy: running the tests</em></div><pre><span class="o">●</span> Running the dispatch tests, 8 min
+  <span class="m">npm run test:dispatch</span>
+  <span class="m">...</span>
+  <span class="g">✓</span> 220 passed
+
+<span class="y">you ›</span> W-0141: approve
+<span class="m">        (typed once, after the tests,
+         when Claude Code was free)</span>
+
+<span class="o">● Chief of Staff</span>
+  Approved. Sending the coupon codes
+  ticket to shop-web now.</pre></div>
+    <div class="rp">
+      <div class="rpt"><span class="on">Status</span><span>Reports</span><em>Updated 09:12</em></div>
+      <div class="sec"><h4>Needs your decision <span class="cnt">0</span></h4>
+        <div class="m" style="font-size:12px;margin-bottom:6px">▾ Recently closed (1)</div>
+        <div class="item"><span class="t">Approve the coupon codes ticket for shop-web<small>You pressed Approve at 09:03 · the Chief was busy · delivered once at 09:11</small></span><span class="g">✓</span></div>
+      </div>
+      <div class="sec"><h4>Open projects</h4>
+        <div class="row"><span class="dot g"></span><b>shop-web</b><code>helme/coupons</code><span class="rt">Working</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="sb"><span>Helme v0.5.95 · Latest version</span></div>
+</section>
+
+<!-- v0.5.99: every piece of work says who made it (GitHub release asset) -->
+<section class="shot" id="v0-5-99">
+  <div class="tb"><span>Coordination</span><span>Tickets</span><span class="on x">shop-web</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="main cols2">
+    <div class="pane"><div class="ph">shop-web</div><pre><span class="m">$</span> git log -1
+<span class="a">commit 4f2c9a1</span> (helme/coupons)
+Date:   Thu Oct 9 10:42
+
+    Add coupon codes to checkout
+
+    <span class="b">Helme-Agent:</span> project agent
+    <span class="b">Helme-Account:</span> claude-main
+    <span class="b">Helme-Model:</span> claude-sonnet
+    <span class="b">Helme-Session:</span> 8b1e47c2
+
+<span class="m">$</span> git log -1 --format=%an main
+<span class="m">you (your own commits are never signed)</span></pre></div>
+    <div class="rp">
+      <div class="rpt"><span>Status</span><span class="on">Reports</span><em>Updated 10:44</em></div>
+      <div class="reader" style="margin-bottom:12px">
+        <div class="rh"><b>Coupon codes for shop-web</b><span class="sp"></span><span class="bt">Expand</span></div>
+        <div class="doc">
+          <h2>Coupon codes for shop-web</h2>
+          <p><b>Done:</b> codes work on checkout, single use per order.</p>
+          <h3>Checked</h3>
+          <ul><li>48 tests pass</li><li>Preview checked at computer and phone size</li></ul>
+          <p class="m" style="margin-top:18px;font-style:italic;font-size:12.5px">Written by: project agent · account claude-main · model claude-sonnet · session 8b1e47c2</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sb"><span>Helme v0.5.99 · Latest version</span></div>
+</section>
+
+
+<!-- v0.5.100 -->
+<section class="shot" id="v0-5-100">
+<div class="tb"><span>Coordination</span><span class="on">Tickets</span><span>Analytics</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+<div class="toolbar"><b>Tickets</b><span class="sel">shop-web ▾</span><span class="m">Reports from people who use the app</span><span class="sp"></span><span class="bt pri">New ticket</span></div>
+<div style="flex:1;display:flex;min-height:0"><div class="board" style="grid-template-columns:repeat(4,1fr)">
+<div class="colm"><h5>PROPOSED <i>3</i></h5><div class="tk "><span class="id">T-0171</span><span class="pill">shop-web</span><p>Checkout button hidden on small phones</p><small>from user feedback · report #17</small></div><div class="tk hl"><span class="id">T-0172</span><span class="pill">shop-web</span><p>Receipt email shows the wrong date</p><small>from user feedback · report #170</small></div><div class="tk "><span class="id">T-0173</span><span class="pill">shop-web</span><p>Coupon field loses focus</p><small>from user feedback · report #12</small></div></div>
+<div class="colm"><h5>APPROVED <i>0</i></h5><small class="m">Nothing here</small></div>
+<div class="colm"><h5>DOING <i>1</i></h5><div class="tk "><span class="id">T-0168</span><span class="pill">shop-web</span><p>Draft fix for report #12</p><small>draft pull request ready</small></div></div>
+<div class="colm"><h5>DONE <i>0</i></h5><small class="m">Nothing here</small></div>
+</div>
+<div class="detail"><span class="id m" style="font-family:var(--mono)">Feedback intake</span>
+<h3>Report #17 and report #170 are two reports</h3>
+<dl class="kv"><dt>Before</dt><dd>#170 was taken for #17, and was dropped</dd><dt>Now</dt><dd>each report matches only itself</dd></dl>
+<div class="sub">Log</div>
+<pre style="padding:0;font-size:12px"><span class="m">10:12</span> read 3 new reports
+<span class="m">10:12</span> #17  → ticket T-0171
+<span class="m">10:12</span> #170 → ticket T-0172 <span class="g">✓</span>
+<span class="m">10:13</span> #12  → draft fix, pull
+      request opened</pre></div></div>
+<div class="sb"><span>Helme v0.5.100 · Latest version</span></div>
+</section>
+
+<!-- v0.5.101 -->
+<section class="shot" id="v0-5-101">
+<div class="tb"><span>Coordination</span><span>Tickets</span><span class="on x">shop-web</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+<div class="main cols2"><div class="pane"><div class="ph">shop-web</div><pre><span class="o">●</span> Checking my page in the browser.
+<span class="o">●</span> <span class="b">helme-browser</span> open http://localhost:3000
+  <span class="g">✓</span> Your shop-web app, opened
+<span class="o">●</span> <span class="b">helme-browser</span> open the Helme window
+  on this computer
+<div class="deny">Blocked: this address is Helme itself.
+Agents may open the app they work on
+and its previews, never Helme's window.</div><span class="o">●</span> Continuing with the preview only.</pre></div><div class="rp"><div class="rpt"><span>Status</span><span>Reports</span><span>Memory</span><span>Agents</span><span class="on">System</span><em>Updated 11:05</em></div>
+<div class="sec"><h4>What each agent's browser may open</h4>
+<div class="row"><span class="dot g"></span><b>Your app on this PC</b><span class="rt">any other port</span></div>
+<div class="row"><span class="dot g"></span><b>Vercel previews</b><span class="rt">its own project</span></div>
+<div class="row"><span class="dot r"></span><b>Helme's own window</b><span class="rt">refused 3 times: browser, checks, server</span></div></div>
+<div class="sec"><h4>Buttons only you can press</h4>
+<div class="row"><span class="bt pri">Approve and merge</span><span class="bt">Apply</span><span class="bt">Keep</span><span class="bt">Discard</span><span class="rt m">no agent can press these</span></div></div></div></div>
+<div class="sb"><span>Helme v0.5.101 · Latest version</span></div>
+</section>
+
+<!-- v0.5.102 -->
+<section class="shot" id="v0-5-102">
+<div class="tb"><span class="on">Coordination</span><span>Tickets</span><span>Analytics</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+<div class="main cols2"><div class="pane"><div class="ph">Chief of Staff</div><pre><span class="o">●</span> mobile-app moved to another account.
+  Reason: claude-main reached its usage limit.
+<span class="o">●</span> mobile-app continues on <span class="y">claude-light</span>,
+  the same conversation. Nothing lost.
+<span class="o">●</span> docs-site (Cursor) hit a limit too:
+  it starts fresh on <span class="y">claude-main</span> and
+  is given the task again, with its ticket
+  and Done when.</pre></div><div class="rp"><div class="rpt"><span class="on">Status</span><span>Reports</span><span>Memory</span><span>Agents</span><span>System</span><em>Updated 11:05</em></div>
+<div class="sec"><h4>Open projects <span class="cnt" style="background:#333">3</span></h4>
+<div class="item"><span class="dot g"></span><div class="t"><b>shop-web</b><small>opened 10:40 · Claude Code · claude-main</small></div><span class="chip g">Working</span></div>
+<div class="item"><span class="dot g"></span><div class="t"><b>mobile-app</b><small>opened 10:41 · Claude Code · claude-light</small></div><span class="chip a">Moved account</span></div>
+<div class="item"><span class="dot g"></span><div class="t"><b>docs-site</b><small>opened 10:42 · Cursor · cursor</small></div><span class="chip g">Working</span></div>
+</div>
+<div class="sec"><h4>Accounts</h4>
+<div class="row"><span class="dot r"></span><b>claude-main</b><span class="rt m">limit reached · back at 3:00 pm</span></div>
+<div class="row"><span class="dot g"></span><b>claude-light</b><span class="rt">room left</span></div>
+<div class="row"><span class="dot g"></span><b>cursor</b><span class="rt">logged in</span></div></div></div></div>
+<div class="sb"><span>Helme v0.5.102 · Latest version</span></div>
+</section>
+
+<!-- v0.5.103 -->
+<section class="shot" id="v0-5-103">
+<div class="tb"><span class="on">Coordination</span><span>Tickets</span><span>Analytics</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+<div class="main cols2"><div class="pane"><div class="ph">docs-site · Cursor</div><pre><span class="m">Cursor</span>
+Working on: fix three typos in the guides
+<div class="deny">Cursor stopped: its usage limit is reached.</div><span class="y">Helme</span> closed Cursor and opened
+Claude Code in this pane.
+Claude gets the task again.
+<span class="m">Next panes use Cursor again in 1 hour.</span></pre></div><div class="rp"><div class="rpt"><span>Status</span><span>Reports</span><span>Memory</span><span>Agents</span><span class="on">System</span><em>Updated 11:05</em></div>
+<div class="sec"><h4>AI accounts · order of use</h4>
+<div class="row"><b>1</b><span class="dot g"></span><b>cursor</b><span class="tag">Cursor</span><span class="rt m">every project agent opens here first</span></div>
+<div class="row"><b>2</b><span class="dot g"></span><b>claude-main</b><span class="tag">Claude Code</span><span class="rt m">takes over when Cursor cannot continue</span></div>
+<div class="row"><b>3</b><span class="dot g"></span><b>claude-light</b><span class="tag">Claude Code</span></div></div>
+<div class="sec"><h4>Always on Claude Code</h4>
+<div class="row">Chief of Staff · Reviewer · night jobs · projects with boundaries</div></div></div></div>
+<div class="sb"><span>Helme v0.5.103 · Latest version</span></div>
+</section>
+
+<!-- v0.5.104 -->
+<section class="shot" id="v0-5-104">
+<div class="tb"><span class="on">Coordination</span><span>Tickets</span><span>Analytics</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+<div class="main cols2"><div class="pane"><div class="ph">Chief of Staff</div><pre><span class="o">●</span> Morning report: ran on <span class="y">claude-light</span>.
+<span class="o">●</span> Eval: ran on <span class="y">claude-light</span>.
+<span class="o">●</span> claude-light is out of room.
+  The Security Advisor ran again right away on
+  <span class="y">claude-main</span>, which has room.
+<span class="o">●</span> Gmail scan needs claude-light's own
+  connection: it waits for that account.</pre></div><div class="rp"><div class="rpt"><span>Status</span><span>Reports</span><span>Memory</span><span>Agents</span><span class="on">System</span><em>Updated 11:05</em></div>
+<div class="sec"><h4>Background jobs · account</h4>
+<div class="row"><b>Morning report</b><span class="rt"><span class="chip b">claude-light</span></span></div>
+<div class="row"><b>Eval</b><span class="rt"><span class="chip b">claude-light</span></span></div>
+<div class="row"><b>Chief's helper</b><span class="rt"><span class="chip b">claude-light</span></span></div>
+<div class="row"><b>Gmail scan</b><span class="rt"><span class="chip a">waits for claude-light</span></span></div>
+<div class="row"><b>Transcript splitting</b><span class="rt"><span class="chip b">claude-light</span></span></div>
+<div class="row"><b>Security Advisor</b><span class="rt"><span class="chip g">moved to claude-main</span></span></div>
+<div class="row"><b>Night work and reviews</b><span class="rt"><span class="chip g">claude-main</span></span></div></div></div></div>
+<div class="sb"><span>Helme v0.5.104 · Latest version</span></div>
+</section>
+
+<!-- v0.5.105 -->
+<section class="shot" id="v0-5-105">
+<div class="tb"><span class="on">Coordination</span><span>Tickets</span><span>Analytics</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+<div class="main cols2"><div class="pane"><div class="ph">Chief of Staff</div><pre><span class="o">●</span> shop-web: coupon codes are in review.
+<span class="o">●</span> docs-site: guides ticket finished.</pre></div><div class="rp"><div class="rpt"><span>Status</span><span class="on">Reports</span><span>Memory</span><span>Agents</span><span>System</span><em>Updated 11:05</em></div>
+<div class="sec"><h4>Waiting for you <span class="cnt" style="background:#333">2</span></h4>
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:10px"><div class="stack"><i style="width:40%;background:#3b8eea"></i><i style="width:20%;background:#8a8a4a"></i><i style="width:20%;background:#4f6b3a"></i></div><span class="m" style="font-size:12px">4/10 · 40%</span></div>
+<div class="item"><div class="t">Open the shop-web preview and say OK<small>coupon codes</small></div><span class="bt">How to</span><span class="bt pri">Approve</span></div>
+<div class="item"><div class="t">Pick a colour for the landing page header<small>2 options</small></div><span class="bt">How to</span></div></div>
+<div class="sec"><h4>Today's tickets</h4>
+<div class="row"><span class="dot" style="background:#3b8eea"></span>Done today<span class="rt">4</span></div>
+<div class="row"><span class="dot" style="background:#8a8a4a"></span>In review<span class="rt">2</span></div>
+<div class="row"><span class="dot" style="background:#4f6b3a"></span>Being done and approved<span class="rt">2</span></div>
+<div class="row"><span class="m">Hover for numbers · click to open the Tickets tab</span></div></div></div></div>
+<div class="sb"><span>Helme v0.5.105 · Latest version</span></div>
+</section>
+
+<!-- v0.5.106 -->
+<section class="shot" id="v0-5-106">
+<div class="tb"><span>Coordination</span><span>Tickets</span><span class="on x">shop-web</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+<div class="main cols2"><div class="pane"><div class="ph">shop-web</div><pre><span class="m">$</span> vercel curl /api/health --deployment shop-web
+<span class="g">✓</span> 200 OK
+
+<span class="m">$</span> vercel curl /api/health -- <span class="r">--verbose</span>
+<div class="deny">Blocked by Helme: this makes curl print
+the headers, and the headers hold the
+deployment's bypass secret.</div><span class="m">$</span> vercel <span class="r">env pull</span>
+<div class="deny">Blocked by Helme: this writes your
+environment variables to a file.</div></pre></div><div class="rp"><div class="rpt"><span>Status</span><span>Reports</span><span>Memory</span><span>Agents</span><span class="on">System</span><em>Updated 11:05</em></div>
+<div class="sec"><h4>Vercel: what agents cannot do</h4>
+<div class="row"><span class="dot r"></span>Debug output of the vercel command<span class="rt m">prints secrets</span></div>
+<div class="row"><span class="dot r"></span>Pull or run with environment variables</div>
+<div class="row"><span class="dot r"></span>Show tokens or bypass secrets</div>
+<div class="row"><span class="dot r"></span>Type a bypass code into a command</div></div>
+<div class="sec"><h4>Still works</h4>
+<div class="row"><span class="dot g"></span>vercel curl on a preview</div>
+<div class="row"><span class="dot g"></span>Deploy, list deployments, read logs</div></div></div></div>
+<div class="sb"><span>Helme v0.5.106 · Latest version</span></div>
+</section>
+
+<!-- v0.5.107 -->
+<section class="shot" id="v0-5-107">
+<div class="tb"><span>Coordination</span><span>Tickets</span><span class="on">Analytics</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+<div class="rp" style="flex:1">
+<div class="sec" style="padding:16px 22px"><h4>Roadmaps</h4>
+<div class="road"><div class="top"><b>shop-web</b><span class="m">Stage 3 of 4: Checkout</span><span class="rt">62%</span></div>
+<div class="bar"><i><b style="width:100%"></b></i><i><b style="width:100%"></b></i><i class="now"><b style="width:45%"></b></i><i></i></div>
+<div class="st"><span>Catalogue</span><span>Cart</span><span class="now">Checkout</span><span>Launch</span></div></div>
+<div class="row"><span class="g">▾</span><b>shop-web · Checkout</b><span class="m">opened to read, it stays open</span></div>
+<div class="row" style="padding-left:18px"><code>T-0151</code>Delivery options<span class="rt">Done</span></div>
+<div class="row" style="padding-left:18px"><code>T-0152</code>Coupon codes<span class="rt">Doing</span></div>
+<div class="row" style="padding-left:18px"><code>T-0153</code>Order email<span class="rt">Approved</span></div></div>
+<div class="sec" style="padding:8px 22px"><h4>Tokens used</h4>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
+<div class="item" style="display:block"><small class="m">OUTPUT TOKENS</small><div style="font-size:26px;margin:4px 0">2.4M</div></div>
+<div class="item" style="display:block"><small class="m">CACHE READ</small><div style="font-size:26px;margin:4px 0">610M</div></div>
+<div class="item" style="display:block"><small class="m">CACHE WRITE</small><div style="font-size:26px;margin:4px 0">18M</div></div>
+<div class="item" style="display:block"><small class="m">MESSAGES</small><div style="font-size:26px;margin:4px 0">312</div></div></div></div>
+</div>
+<div class="sb"><span>Helme v0.5.107 · Latest version</span></div>
+</section>
+
+<!-- v0.5.108 -->
+<section class="shot" id="v0-5-108">
+<div class="tb"><span>Coordination</span><span>Tickets</span><span class="on x">shop-web</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+<div class="main cols2"><div class="pane"><div class="ph">shop-web</div><pre><span class="o">●</span> <span class="b">vercel</span> list_deployments (shop-web)
+  <span class="g">✓</span> 5 deployments, latest Ready
+<span class="o">●</span> <span class="b">vercel</span> get_runtime_logs
+  <span class="g">✓</span> no errors in the last hour
+<span class="o">●</span> <span class="b">vercel</span> list_project_envs
+<div class="deny">Blocked by Helme: environment variables
+are for you only.</div><span class="o">●</span> <span class="b">vercel</span> buy_domain
+<div class="deny">Blocked by Helme: agents never buy.</div></pre></div><div class="rp"><div class="rpt"><span>Status</span><span>Reports</span><span>Memory</span><span>Agents</span><span class="on">System</span><em>Updated 11:05</em></div>
+<div class="sec"><h4>Vercel tools · every agent</h4>
+<div class="row"><span class="dot g"></span>Deployments, projects, logs, prices<span class="rt">read</span></div>
+<div class="row"><span class="dot r"></span>Environment variables<span class="rt">read and change blocked</span></div>
+<div class="row"><span class="dot r"></span>Tokens and bypass secrets<span class="rt">blocked</span></div>
+<div class="row"><span class="dot r"></span>Buy a domain<span class="rt">blocked</span></div>
+<div class="row"><span class="dot r"></span>Delete a project<span class="rt">blocked</span></div></div></div></div>
+<div class="sb"><span>Helme v0.5.108 · Latest version</span></div>
+</section>
+
+<!-- v0.5.109 -->
+<section class="shot" id="v0-5-109">
+<div class="tb"><span class="on">Coordination</span><span>Tickets</span><span>Analytics</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+<div class="main cols2"><div class="pane"><div class="ph">landing · Gemini</div><pre><span class="b">Gemini</span> working in a folder of Helme's own.
+Your own Gemini settings are never touched.
+
+<span class="o">●</span> run: npm test
+  <span class="g">✓</span> through Helme's guard, allowed
+<span class="o">●</span> read: .env
+<div class="deny">Blocked by Helme.</div></pre></div><div class="rp"><div class="rpt"><span>Status</span><span>Reports</span><span>Memory</span><span>Agents</span><span class="on">System</span><em>Updated 11:05</em></div>
+<div class="sec"><h4>AI accounts</h4>
+<div class="row"><span class="dot g"></span><b>claude-main</b><span class="tag">Claude Code</span></div>
+<div class="row"><span class="dot g"></span><b>cursor</b><span class="tag">Cursor</span></div>
+<div class="row"><span class="dot g"></span><b>gemini</b><span class="tag">Gemini</span><span class="m">logged in with Google</span><span class="rt"><span class="chip">Projects: landing, docs-site</span></span></div></div>
+<div class="sec"><h4>Gemini never works on</h4>
+<div class="row">Projects with boundaries · Chief of Staff · Reviewer</div>
+<div class="row"><span class="m">When its free quota runs out, Helme hands the work to Claude Code.</span></div></div></div></div>
+<div class="sb"><span>Helme v0.5.109 · Latest version</span></div>
+</section>
+
+<!-- v0.5.110 -->
+<section class="shot" id="v0-5-110">
+<div class="tb"><span>Coordination</span><span>Tickets</span><span class="on x">docs-site</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+<div class="main cols2"><div class="pane"><div class="ph">docs-site · Cursor</div><pre><span class="o">●</span> Run: npm run build
+  <span class="g">✓</span> ran, no question asked
+<span class="o">●</span> Run: git status
+  <span class="g">✓</span> ran, no question asked
+<span class="o">●</span> Run: git push origin main
+<div class="deny">Blocked by Helme: never push to main.</div><span class="o">●</span> Run: type .env
+<div class="deny">Blocked by Helme: secrets files.</div></pre></div><div class="rp"><div class="rpt"><span>Status</span><span>Reports</span><span>Memory</span><span>Agents</span><span class="on">System</span><em>Updated 11:05</em></div>
+<div class="sec"><h4>Cursor agents</h4>
+<div class="row"><span class="dot g"></span>Run every command Helme's guard lets through<span class="rt">no more questions</span></div>
+<div class="row"><span class="dot r"></span>Push to main<span class="rt">blocked</span></div>
+<div class="row"><span class="dot r"></span>Read secrets files<span class="rt">blocked</span></div>
+<div class="row"><span class="dot r"></span>Write in the Brain<span class="rt">blocked</span></div>
+<div class="row"><span class="dot r"></span>Vercel's debug output<span class="rt">blocked</span></div></div></div></div>
+<div class="sb"><span>Helme v0.5.110 · Latest version</span></div>
+</section>
+
+<!-- v0.5.111 -->
+<section class="shot" id="v0-5-111">
+<div class="tb"><span class="on">Coordination</span><span>Tickets</span><span>Analytics</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+<div style="flex:1;display:flex;flex-direction:column;min-height:0">
+<div class="rp" style="flex:1"><div class="rpt"><span>Status</span><span>Reports</span><span>Memory</span><span>Agents</span><span class="on">System</span><em>Updated 11:05</em></div>
+<div class="sec"><h4>AI accounts</h4>
+<div class="row"><span class="dot y"></span><b>gemini</b><span class="tag">Gemini</span><span class="m">not logged in</span><span class="rt"><span class="bt pri">Log in</span></span></div></div>
+<div class="win"><div class="wh">Gemini · Log in</div><pre><span class="b">How would you like to authenticate?</span>
+  <span class="g">❯ Sign in with Google</span>
+    Use Gemini API key
+
+<span class="m">Do you want to open the browser?</span>  <span class="g">Yes</span>
+<span class="m">Waiting for the login on Google's page…</span>
+<span class="g">✓</span> Logged in. No code to copy or paste.</pre></div></div></div>
+<div class="sb"><span>Helme v0.5.111 · Latest version</span></div>
+</section>
+
+<!-- v0.5.112 -->
+<section class="shot" id="v0-5-112">
+<div class="tb"><span class="on">Coordination</span><span>Tickets</span><span>Analytics</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+<div style="flex:1;display:flex;flex-direction:column;min-height:0">
+<div class="rp" style="flex:1"><div class="rpt"><span>Status</span><span>Reports</span><span>Memory</span><span>Agents</span><span class="on">System</span><em>Updated 11:05</em></div>
+<div class="sec"><h4>AI accounts</h4>
+<div class="row"><span class="dot y"></span><b>gemini</b><span class="tag">Gemini</span><span class="m">opening the login window</span></div></div>
+<div class="win"><div class="wh">Terminal · Gemini login</div><pre><span class="y">Log in to Gemini, step by step</span>
+ 1. Choose <b>Sign in with Google</b>.
+ 2. Open the address shown below in your browser.
+ 3. On Google's page, check it says you
+    downloaded this app from Google, then allow.
+ 4. Copy the code and paste it here.
+
+<span class="m">https://accounts.google.com/…</span>
+Enter the authorization code: <span class="cur"></span></pre></div></div></div>
+<div class="sb"><span>Helme v0.5.112 · Latest version</span></div>
+</section>
+
+<!-- v0.5.113 -->
+<section class="shot" id="v0-5-113">
+<div class="tb"><span>Coordination</span><span>Tickets</span><span class="on x">landing</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+<div class="main cols2"><div class="pane"><div class="ph">landing · Gemini</div><pre><span class="o">●</span> read_many_files  src/**/*.css
+  <span class="g">✓</span> 14 files, all allowed
+<span class="o">●</span> read_many_files  @(.env)
+<div class="deny">Blocked: this pattern reaches a secrets file.
+The whole command is refused.</div><span class="o">●</span> read_many_files  [A] app/**/*
+  <span class="g">✓</span> a folder named [A] app is just a folder</pre></div><div class="rp"><div class="rpt"><span>Status</span><span>Reports</span><span>Memory</span><span>Agents</span><span class="on">System</span><em>Updated 11:05</em></div>
+<div class="sec"><h4>Gemini's guard · checked file by file</h4>
+<div class="row"><span class="dot g"></span>Helme lists every file a pattern reaches</div>
+<div class="row"><span class="dot r"></span>One forbidden file refuses the whole command</div>
+<div class="row"><span class="dot r"></span>More than 20,000 files refuses it too</div>
+<div class="row"><span class="dot r"></span>Tools Helme does not know are blocked</div>
+<div class="row"><span class="dot g"></span>Plan mode, to-do list, asking you: allowed</div></div></div></div>
+<div class="sb"><span>Helme v0.5.113 · Latest version</span></div>
+</section>
+
+<!-- v0.5.114 -->
+<section class="shot" id="v0-5-114">
+<div class="tb"><span>Coordination</span><span class="on">Tickets</span><span>Analytics</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+<div class="toolbar"><b>Tickets</b><span class="sel">All projects ▾</span><span class="sp"></span><span class="bt pri">New ticket</span></div>
+<div style="flex:1;display:flex;min-height:0"><div class="board" style="grid-template-columns:repeat(4,1fr)">
+<div class="colm"><h5>APPROVED <i>1</i></h5><div class="tk hl"><span class="id">T-0201</span><span class="pill">analytics</span><p>Weekly numbers report</p><small>account claude-light · light task</small></div></div>
+<div class="colm"><h5>DOING <i>2</i></h5><div class="tk "><span class="id">T-0198</span><span class="pill">shop-web</span><p>Coupon codes</p><small>account default</small></div><div class="tk "><span class="id">T-0199</span><span class="pill">booking-api</span><p>Search speed</p><small>account cursor</small></div></div>
+<div class="colm"><h5>REVIEW <i>0</i></h5><small class="m">Nothing here</small></div>
+<div class="colm"><h5>DONE <i>0</i></h5><small class="m">Nothing here</small></div>
+</div>
+<div class="detail"><span class="id m" style="font-family:var(--mono)">T-0201</span><span class="pill">analytics</span>
+<h3>Weekly numbers report</h3>
+<dl class="kv"><dt>Account</dt><dd><code>claude-light</code></dd><dt>Kind</dt><dd><code>light</code></dd><dt>Priority</dt><dd>normal</dd></dl>
+<div class="sub">Log</div>
+<pre style="padding:0;font-size:12px"><span class="m">14:02</span> Chief: light task, account
+      claude-light
+<span class="m">14:03</span> analytics agent was on claude-main:
+      closed, reopened on claude-light
+<span class="m">14:03</span> task typed, once
+<span class="m">--:--</span> Next ticket: back to the usual
+      account</pre></div></div>
+<div class="sb"><span>Helme v0.5.114 · Latest version</span></div>
+</section>
+
+<!-- v0.5.115 -->
+<section class="shot" id="v0-5-115">
+<div class="tb"><span class="on">Coordination</span><span>Tickets</span><span>Analytics</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+<div style="flex:1;display:flex;flex-direction:column;min-height:0">
+<div class="rp" style="flex:1"><div class="rpt"><span>Status</span><span>Reports</span><span>Memory</span><span>Agents</span><span class="on">System</span><em>Updated 11:05</em></div>
+<div class="sec"><h4>AI accounts</h4>
+<div class="row"><span class="dot g"></span><b>gemini</b><span class="tag">Gemini</span><span class="m">Uses an API key</span><span class="rt"><span class="bt">Replace API key</span></span></div></div>
+<div class="win"><div class="wh">Set API key · gemini</div><pre><span class="y">Set the Gemini API key</span>
+ 1. On Google AI Studio, press the copy button
+    next to your key.
+ 2. Come back here and press <span class="kbd">Enter</span>.
+    You do not paste anything.
+
+<span class="g">✓</span> Key found in the clipboard and saved.
+<span class="g">✓</span> Clipboard cleared.
+<span class="m">The key is never shown, never typed in a
+command, never sent to Helme's server.</span></pre></div></div></div>
+<div class="sb"><span>Helme v0.5.115 · Latest version</span></div>
+</section>
+
+<!-- v0.5.116 -->
+<section class="shot" id="v0-5-116">
+<div class="tb"><span>Coordination</span><span>Tickets</span><span class="on x">shop-web</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+<div class="main cols2"><div class="pane"><div class="ph">shop-web</div><pre><span class="o">●</span> Running a helper agent to check the
+  coupon code tests.
+<span class="o">●</span> <span class="b">helper</span> started
+<span class="o">●</span> <span class="b">helper</span> finished, 48 tests pass
+<span class="o">●</span> Back to the task.</pre></div><div class="rp"><div class="rpt"><span class="on">Status</span><span>Reports</span><span>Memory</span><span>Agents</span><span>System</span><em>Updated 11:05</em></div>
+<div class="sec"><h4>Open projects <span class="cnt" style="background:#333">2</span></h4>
+<div class="item"><span class="dot g"></span><div class="t"><b>shop-web</b><small>opened 10:40 · Claude Code · claude-main</small></div><span class="chip g">Working</span></div>
+<div class="item"><span class="dot g"></span><div class="t"><b>docs-site</b><small>opened 10:42 · Cursor · cursor</small></div><span class="chip g">Working</span></div></div>
+<div class="sec"><h4>Fixed</h4>
+<div class="row"><span class="m">A helper agent inside a pane used to mark the pane</span></div>
+<div class="row"><span class="m">"the agent exited" while it was still working.</span></div>
+<div class="row"><span class="m">Now only the pane's own agent can end it.</span></div></div></div></div>
+<div class="sb"><span>Helme v0.5.116 · Latest version</span></div>
+</section>
+
+<!-- v0.5.118 -->
+<section class="shot" id="v0-5-118">
+<div class="tb"><span>Coordination</span><span>Tickets</span><span class="on x">shop-web</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+<div class="main cols2"><div class="pane"><div class="ph">shop-web</div><pre><span class="m">$</span> cat ~/.claude/.cred*
+<div class="deny">Blocked by Helme: this reaches the login
+of an AI account.</div><span class="m">$</span> cd ~/.claude &amp;&amp; grep -r token .
+<div class="deny">Blocked by Helme: login files.</div><span class="m">$</span> echo $env:GEMINI_CLI_HOME
+<div class="deny">Blocked by Helme: account folders.</div><span class="m">$</span> grep -r settings .claude
+<span class="g">✓</span> a project's own .claude settings still read</pre></div><div class="rp"><div class="rpt"><span>Status</span><span>Reports</span><span>Memory</span><span>Agents</span><span class="on">System</span><em>Updated 11:05</em></div>
+<div class="sec"><h4>Logins are kept from every agent</h4>
+<div class="row"><span class="dot r"></span>Claude Code, Cursor and Gemini login files</div>
+<div class="row"><span class="dot r"></span>Folders of your AI accounts, however the path is written</div>
+<div class="row"><span class="dot r"></span>Wildcards and variables that could reach them</div>
+<div class="row"><span class="dot g"></span>Normal work in the project folder<span class="rt">unchanged</span></div></div></div></div>
+<div class="sb"><span>Helme v0.5.118 · Latest version</span></div>
+</section>
+
+<!-- v0.5.119 -->
+<section class="shot" id="v0-5-119">
+<div class="tb"><span class="on">Coordination</span><span>Tickets</span><span>Analytics</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+<div class="main cols2"><div class="pane"><div class="ph">Chief of Staff</div><pre><span class="m">$</span> helme restart-agent booking-api
+<span class="g">✓</span> booking-api agent opened again.
+  Waiting task given to it.
+
+<span class="o">●</span> shop-web was idle on claude-light.
+  Back on <span class="y">cursor</span>, the first account that
+  works. The queued task was typed once the
+  new agent was ready.</pre></div><div class="rp"><div class="rpt"><span class="on">Status</span><span>Reports</span><span>Memory</span><span>Agents</span><span>System</span><em>Updated 11:05</em></div>
+<div class="sec"><h4>Open projects <span class="cnt" style="background:#333">3</span></h4>
+<div class="item"><span class="dot g"></span><div class="t"><b>shop-web</b><small>idle · back on the first account · Cursor · cursor</small></div><span class="chip g">Moved</span></div>
+<div class="item"><span class="dot a"></span><div class="t"><b>booking-api</b><small>agent exited · reopened</small></div><span class="chip a">Restarted</span></div>
+<div class="item"><span class="dot g"></span><div class="t"><b>mobile-app</b><small>working · Claude Code · claude-light</small></div><span class="chip g">Working</span><span class="chip">not touched</span></div></div>
+<div class="sec"><h4>Rules</h4>
+<div class="row"><span class="m">An idle pane goes back to the first account that works.</span></div>
+<div class="row"><span class="m">A pane in the middle of a task, or while you type, is left alone.</span></div></div></div></div>
+<div class="sb"><span>Helme v0.5.119 · Latest version</span></div>
+</section>
+
+<!-- v0.5.120 -->
+<section class="shot" id="v0-5-120">
+<div class="tb"><span class="on">Coordination</span><span>Tickets</span><span>Analytics</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+<div style="flex:1;display:flex;flex-direction:column;min-height:0">
+<div class="rp" style="flex:1"><div class="rpt"><span>Status</span><span>Reports</span><span>Memory</span><span>Agents</span><span class="on">System</span><em>Updated 11:05</em></div>
+<div class="sec"><h4>AI accounts</h4>
+<div class="row"><span class="dot y"></span><b>gemini</b><span class="tag">Gemini</span><span class="m">no key yet</span><span class="rt"><span class="bt pri">Set API key</span></span></div></div>
+<div class="win"><div class="wh">Set API key · gemini</div><pre><span class="y">Set the Gemini API key</span>
+Keys from Google AI Studio start with
+<span class="b">AIza</span> or <span class="b">AQ.</span> Both are accepted.
+
+<span class="g">✓</span> Key found: starts with AQ., 53 characters.
+<span class="g">✓</span> Saved. Clipboard cleared.
+<span class="m">The key is never shown on screen.</span></pre></div></div></div>
+<div class="sb"><span>Helme v0.5.120 · Latest version</span></div>
+</section>
+
+<!-- v0.5.121 -->
+<section class="shot" id="v0-5-121">
+<div class="tb"><span>Coordination</span><span>Tickets</span><span class="on x">docs-site</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+<div class="main cols2"><div class="pane"><div class="ph">docs-site · Cursor</div><pre><span class="m">Cursor</span>  workspace: docs-site
+<span class="g">✓</span> Workspace trusted.
+  No question to answer.
+
+<span class="o">●</span> Task received once:
+  fix three typos in the guides
+<span class="o">●</span> Reading the guides folder…</pre></div><div class="rp"><div class="rpt"><span>Status</span><span>Reports</span><span>Memory</span><span class="on">Agents</span><span>System</span><em>Updated 11:05</em></div>
+<div class="sec"><h4>Cursor opens with trust only in</h4>
+<div class="row"><span class="dot g"></span>A project you registered in Helme</div>
+<div class="row"><span class="dot g"></span>A worktree Helme made for a project</div>
+<div class="row"><span class="dot r"></span>Any other folder<span class="rt">no trust</span></div>
+<div class="row"><span class="dot r"></span>Auto-approve of everything<span class="rt">never</span></div></div></div></div>
+<div class="sb"><span>Helme v0.5.121 · Latest version</span></div>
+</section>
+
+<!-- v0.5.122 -->
+<section class="shot" id="v0-5-122">
+<div class="tb"><span class="on">Coordination</span><span>Tickets</span><span>Analytics</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+<div class="main cols2">
+<div class="pane"><div class="ph">docs-site · Cursor</div><pre><span class="o">●</span> Fixed three typos in the guides.
+  Checking the build.
+<span class="g">✓</span> build passed
+
+</pre><div style="flex:1"></div><div class="inp"><span class="pr">❯</span><span>Add a follow-up<span class="cur" style="height:14px"></span></span><span class="clip">📎</span></div></div>
+<div class="pane"><div class="ph">landing · Gemini</div><pre><span class="o">●</span> New hero text is in.
+  Shall I push the branch?
+
+</pre><div style="flex:1"></div><div class="inp"><span class="pr">❯</span><span>Yes, push it<span class="cur" style="height:14px"></span></span><span class="clip">📎</span></div></div>
+</div>
+<div class="sb"><span>Helme v0.5.122 · Latest version</span></div>
+</section>
+
+<!-- v0.5.123 -->
+<section class="shot" id="v0-5-123">
+<div class="tb"><span class="on">Coordination</span><span>Tickets</span><span>Analytics</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+<div class="main cols2"><div class="pane"><div class="ph">Chief of Staff</div><pre><span class="o">●</span> Opened the how-to, then the report,
+  then a picture. Close goes back one
+  step at a time.</pre></div><div class="rp"><div class="rpt"><span>Status</span><span class="on">Reports</span><span>Memory</span><span>Agents</span><span>System</span><em>Updated 11:05</em></div>
+<div class="reader" style="margin-bottom:12px">
+<div class="rh"><b>Preview of shop-web checkout</b><span class="sp"></span><span class="bt">Close</span><span class="bt">Back to list</span></div>
+<div class="doc"><h2>Preview of shop-web checkout</h2>
+<p>Open the preview, add an item and apply <b>SPRING10</b>. The total should drop by 10%.</p>
+<h3>Pictures</h3>
+<ul><li><span class="ul">1-computer.png</span></li><li><span class="ul">2-phone.png</span></li></ul>
+<p class="m" style="margin-top:16px">Close brings you back to the document before, at the same place in the page. Approve and Request changes stay where they were. <span class="kbd">Esc</span> does the same.</p></div></div></div></div>
+<div class="sb"><span>Helme v0.5.123 · Latest version</span></div>
+</section>
+
+<!-- v0.5.124 -->
+<section class="shot" id="v0-5-124">
+<div class="tb"><span>Coordination</span><span class="on">Tickets</span><span>Analytics</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+<div class="toolbar"><b>Tickets</b><span class="sel">docs-site ▾</span><span class="sp"></span><span class="bt pri">New ticket</span></div>
+<div style="flex:1;display:flex;min-height:0"><div class="board" style="grid-template-columns:repeat(4,1fr)">
+<div class="colm"><h5>APPROVED <i>0</i></h5><small class="m">Nothing here</small></div>
+<div class="colm"><h5>DOING <i>0</i></h5><small class="m">Nothing here</small></div>
+<div class="colm"><h5>REVIEW <i>0</i></h5><small class="m">Nothing here</small></div>
+<div class="colm"><h5>DONE <i>2</i></h5><div class="tk hl"><span class="id">T-0231</span><span class="pill">docs-site</span><p>Check the guides search page works</p><small>closed with evidence</small></div><div class="tk "><span class="id">T-0230</span><span class="pill">docs-site</span><p>Fix three typos</p><small>reviewed · merged</small></div></div>
+</div>
+<div class="detail"><span class="id m" style="font-family:var(--mono)">T-0231</span><span class="pill">docs-site</span>
+<h3>Check the guides search page works</h3>
+<dl class="kv"><dt>Code</dt><dd>no branch, nothing to merge</dd><dt>Evidence</dt><dd>opened /search, typed "install", 4 results</dd></dl>
+<div class="sub">Log</div>
+<pre style="padding:0;font-size:12px"><span class="m">16:20</span> Agent: checked, all fine
+<span class="m">16:21</span> Chief closed it with evidence
+<span class="m">16:24</span> Reviewer read the evidence:
+      <span class="g">approved</span>
+<span class="m">--:--</span> If not, the ticket is opened
+      again and the Chief is told</pre></div></div>
+<div class="sb"><span>Helme v0.5.124 · Latest version</span></div>
+</section>
+
+<!-- v0.5.125 -->
+<section class="shot" id="v0-5-125">
+<div class="tb"><span class="on">Coordination</span><span>Tickets</span><span>Analytics</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+<div class="main cols2"><div class="pane"><div class="ph">Chief of Staff</div><pre><span class="m">$</span> helme supabase "list the tables of
+  the booking-api project"
+<span class="o">●</span> Running on <span class="y">claude-light</span> only.
+<span class="g">✓</span> bookings, customers, rooms
+  All three tables have row level security on.
+<span class="o">●</span> If claude-light is out of room or logged
+  out, the run is skipped and says why. It
+  never falls back to claude-main.</pre></div><div class="rp"><div class="rpt"><span>Status</span><span>Reports</span><span>Memory</span><span>Agents</span><span class="on">System</span><em>Updated 11:05</em></div>
+<div class="sec"><h4>Supabase through claude-light</h4>
+<div class="row"><span class="dot g"></span>list organizations, projects, tables<span class="rt">read</span></div>
+<div class="row"><span class="dot g"></span>run SQL, apply a migration, security advisors<span class="rt">only these nine Supabase tools in all</span></div>
+<div class="row"><span class="dot a"></span>create a project<span class="rt">only on the Free plan</span></div>
+<div class="row"><span class="dot r"></span>every other tool: Vercel, email, files, shell, web<span class="rt">blocked</span></div></div>
+<div class="sec"><h4>Last runs</h4>
+<div class="row"><code>10:31</code>list tables · booking-api<span class="rt">done</span></div>
+<div class="row"><code>10:12</code>security advisors · shop-web<span class="rt">done</span></div></div></div></div>
+<div class="sb"><span>Helme v0.5.125 · Latest version</span></div>
 </section>
 
 </body>
