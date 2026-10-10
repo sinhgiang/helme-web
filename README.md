@@ -258,7 +258,7 @@ logo.svg, favicon.svg       the Helme mark (the captain’s wheel) and the favic
 og.png, og/og.html         the share preview image and its HTML source
 updates/                   the Updates page
   releases.js              the notes of the versions up to v0.5.28 (newer ones are GitHub releases)
-  releases-core.js         reads GitHub releases and merges them with releases.js
+  releases-core.js         reads every page of GitHub releases and merges them with releases.js
   index.html, updates.js, updates.css
   shots/source.html        every release screenshot, drawn in HTML with sample data
   shots/shot.css           styles of the screenshots
@@ -358,5 +358,8 @@ How the page uses releases:
   `gh release delete v0.5.34 --cleanup-tag`.
 - The versions up to v0.5.28 are in `updates/releases.js` and stay as they are. A release with the same version
   replaces the entry from that file.
+- GitHub sends at most 100 releases at a time, so the page reads them page by page until it has every release
+  (each page is one request; the list is kept in the browser for five minutes).
 - If GitHub cannot be reached (for example its limit of 60 requests an hour per visitor), the page shows the
-  entries from `releases.js` only.
+  entries from `releases.js` only. If only a later page fails, the page shows the releases it did read and
+  tries again on the next visit.
