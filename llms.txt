@@ -1,0 +1,18 @@
+# Helme
+
+> Helme is a Windows app that runs a team of AI coding agents from one screen: a Chief of Staff that turns one plain sentence into tickets, one agent per project, a Reviewer that checks every change, and one list of what waits for the owner. It is built for founders who run several products and do not write code. Helme is in private use today and is not yet available to download.
+
+## Pages
+
+- [Home](https://helme-web.vercel.app/): what Helme is, how it works, features, safety boundaries and a FAQ.
+- [Updates](https://helme-web.vercel.app/updates/): what changed in every version of Helme, newest first, with a screenshot of each release.
+- [Releases on GitHub](https://github.com/sinhgiang/helme-web/releases): the same release notes as plain text; the Updates page is built from them.
+
+## Facts
+
+- Runs on the owner's own Windows PC, not in the cloud. Projects, reports and decisions are plain text files on the disk.
+- Project agents run Claude Code by default. The Reviewer is a separate agent and can be set to a model from another provider.
+- Agents never touch money, keys and passwords, real customer data or messages to real people without the owner's yes, and never push to the main branch.
+- A night shift runs on an editable schedule (agents at 23:00, review at 02:00) and a morning report is ready at 06:30.
+
+Last updated: 2026-10-24

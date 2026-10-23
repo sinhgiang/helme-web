@@ -4,17 +4,69 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Helme — Run a team of AI agents from one screen</title>
-<meta name="description" content="Helme runs a team of AI coding agents on your Windows PC: a Chief of Staff that plans, one agent per project, a Reviewer that checks every change, and one list of what waits for you.">
+<meta name="description" content="Helme runs AI coding agents on your Windows PC: a Chief of Staff that plans, one agent per project, a Reviewer for every change, one list of what waits for you.">
 <meta property="og:title" content="Helme — Run a team of AI agents from one screen">
 <meta property="og:description" content="A Chief of Staff, one agent per project, a Reviewer before every merge. You decide, the agents do the work.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://helme-web.vercel.app">
+<meta property="og:site_name" content="Helme">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://helme-web.vercel.app/">
 <meta property="og:image" content="https://helme-web.vercel.app/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Helme: run a team of AI agents from one screen">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://helme-web.vercel.app">
+<meta name="twitter:title" content="Helme — Run a team of AI agents from one screen">
+<meta name="twitter:description" content="A Chief of Staff, one agent per project, a Reviewer before every merge. You decide, the agents do the work.">
+<meta name="twitter:image" content="https://helme-web.vercel.app/og.png">
+<meta name="twitter:image:alt" content="Helme: run a team of AI agents from one screen">
+<link rel="canonical" href="https://helme-web.vercel.app/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://helme-web.vercel.app/#website",
+      "url": "https://helme-web.vercel.app/",
+      "name": "Helme",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://helme-web.vercel.app/#app",
+      "name": "Helme",
+      "url": "https://helme-web.vercel.app/",
+      "image": "https://helme-web.vercel.app/og.png",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Windows",
+      "description": "Helme runs a team of AI coding agents on your Windows PC: a Chief of Staff that plans, one agent per project, a Reviewer that checks every change, and one list of what waits for you."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://helme-web.vercel.app/#page",
+      "url": "https://helme-web.vercel.app/",
+      "name": "Helme — Run a team of AI agents from one screen",
+      "isPartOf": { "@id": "https://helme-web.vercel.app/#website" },
+      "about": { "@id": "https://helme-web.vercel.app/#app" },
+      "dateModified": "2026-10-24"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "What exactly is Helme?", "acceptedAnswer": { "@type": "Answer", "text": "A local app for Windows that opens real terminals for AI coding agents, one per project, and arranges them in tabs and panes. A Chief of Staff agent coordinates them, a Reviewer agent checks their work, and a report area shows what is running and what waits for you." } },
+        { "@type": "Question", "name": "Do I need to know how to code?", "acceptedAnswer": { "@type": "Answer", "text": "No. Helme was built for an owner who runs several products and does not write code. You give work in plain sentences and answer the decisions that need you." } },
+        { "@type": "Question", "name": "Which AI does it use?", "acceptedAnswer": { "@type": "Answer", "text": "Project agents run Claude Code by default. The Reviewer is a separate agent with its own instructions, and it can be set to a model from another provider, so the code is checked by a second pair of eyes." } },
+        { "@type": "Question", "name": "Can an agent spend money or leak my keys?", "acceptedAnswer": { "@type": "Answer", "text": "Not without you. Money, secrets, real data and messages to real people are blocked by default. The agent writes down what it needs and why, and waits for your answer." } },
+        { "@type": "Question", "name": "Can the agents work while I sleep?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The night shift is a schedule you can edit: agents work at 23:00, the Reviewer checks at 02:00, and a morning report is waiting at 06:30. If the PC was asleep, the work runs as soon as it wakes. The boundaries stay on: nothing that touches money, keys, real data or real people runs without your yes." } },
+        { "@type": "Question", "name": "How is Helme different from opening Claude Code in several terminals?", "acceptedAnswer": { "@type": "Answer", "text": "Helme adds what a row of terminals lacks: a Chief of Staff that turns one sentence into tickets and sends them to the right project, a Reviewer that checks each change, one list of what waits for you, and boundaries that Helme enforces itself instead of relying on instructions alone." } },
+        { "@type": "Question", "name": "Does it run in the cloud?", "acceptedAnswer": { "@type": "Answer", "text": "No. Helme runs on your own PC with Node.js, real terminals and plain files. Your code goes only where your projects already live, such as your own GitHub." } },
+        { "@type": "Question", "name": "Can I download it?", "acceptedAnswer": { "@type": "Answer", "text": "Not yet. Helme is in private use today. This page only introduces it." } }
+      ]
+    }
+  ]
+}
+</script>
 <meta name="theme-color" content="#000000">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,6 +87,7 @@
       <a href="#features">Features</a>
       <a href="#safety">Safety</a>
       <a href="#faq">FAQ</a>
+      <a href="updates/">Updates</a>
     </nav>
   </div>
 </header>
@@ -89,18 +142,18 @@
         <div class="pane report">
           <div class="rep-tabs"><span class="on">Status</span><span>Reports</span><em>Updated 09:41</em></div>
           <div class="rep-sec">
-            <h4>Waiting for you <b>2</b></h4>
+            <div class="rep-h">Waiting for you <b>2</b></div>
             <div class="wait"><span>Approve the payment provider for shop-web</span><a>How to</a><a class="done">Done</a></div>
             <div class="wait"><span>Pick one of two app icons for mobile-app</span><a>How to</a><a class="done">Done</a></div>
           </div>
           <div class="rep-sec">
-            <h4>Open projects</h4>
+            <div class="rep-h">Open projects</div>
             <div class="proj"><i class="g"></i><b>shop-web</b><code>helme/checkout</code><span>working</span></div>
             <div class="proj"><i class="g"></i><b>mobile-app</b><code>helme/login-crash</code><span>working</span></div>
             <div class="proj"><i class="y"></i><b>booking-api</b><code>helme/rate-limit</code><span>in review</span></div>
           </div>
           <div class="rep-sec hide-sm">
-            <h4>Latest review</h4>
+            <div class="rep-h">Latest review</div>
             <div class="rev"><span class="pass">PASS</span> booking-api · rate limit on search</div>
           </div>
         </div>
@@ -267,9 +320,9 @@
     <p class="kicker">Made for non-coders</p>
     <h2 class="huge">You decide.<br><span class="dim">Agents do the work.</span></h2>
     <div class="cols3">
-      <div><h4>No code to read</h4><p>Reports come in plain language, in your language. Code and commits stay in English for the machines.</p></div>
-      <div><h4>Trust grows step by step</h4><p>Say "next time you can decide this yourself" and the agent adds that one kind of task to what it may do alone.</p></div>
-      <div><h4>Everything on your disk</h4><p>Projects, reports and decisions are plain text files on your PC. No cloud database, nothing locked away.</p></div>
+      <div><h3>No code to read</h3><p>Reports come in plain language, in your language. Code and commits stay in English for the machines.</p></div>
+      <div><h3>Trust grows step by step</h3><p>Say "next time you can decide this yourself" and the agent adds that one kind of task to what it may do alone.</p></div>
+      <div><h3>Everything on your disk</h3><p>Projects, reports and decisions are plain text files on your PC. No cloud database, nothing locked away.</p></div>
     </div>
   </div>
 </section>
@@ -297,6 +350,14 @@
       <details>
         <summary>Can an agent spend money or leak my keys?</summary>
         <p>Not without you. Money, secrets, real data and messages to real people are blocked by default. The agent writes down what it needs and why, and waits for your answer.</p>
+      </details>
+      <details>
+        <summary>Can the agents work while I sleep?</summary>
+        <p>Yes. The night shift is a schedule you can edit: agents work at 23:00, the Reviewer checks at 02:00, and a morning report is waiting at 06:30. If the PC was asleep, the work runs as soon as it wakes. The boundaries stay on: nothing that touches money, keys, real data or real people runs without your yes.</p>
+      </details>
+      <details>
+        <summary>How is Helme different from opening Claude Code in several terminals?</summary>
+        <p>Helme adds what a row of terminals lacks: a Chief of Staff that turns one sentence into tickets and sends them to the right project, a Reviewer that checks each change, one list of what waits for you, and boundaries that Helme enforces itself instead of relying on instructions alone.</p>
       </details>
       <details>
         <summary>Does it run in the cloud?</summary>
@@ -329,7 +390,7 @@
     <nav class="foot-links" aria-label="Footer">
       <a href="updates/">Updates</a>
     </nav>
-    <span class="muted">Run a team of AI agents from one screen. © 2026</span>
+    <span class="muted">Run a team of AI agents from one screen. © 2026 · Last updated <time datetime="2026-10-24">October 24, 2026</time></span>
   </div>
 </footer>
 

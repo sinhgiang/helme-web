@@ -41,7 +41,7 @@
 .rel-item.on .ri-title { color: #d4d4d4; }
 
 .badge {
-  font-size: 11px; font-weight: 600; line-height: 18px;
+  font-size: 12px; font-weight: 600; line-height: 18px;
   padding: 0 8px; border-radius: 999px;
   color: #0a0a0a; background: var(--green);
 }
@@ -109,3 +109,4 @@
 }
 
 .rel code { font-family: var(--mono); font-size: .88em; background: #141414; border: 1px solid var(--line-2); border-radius: 4px; padding: 0 5px; }
+.up-lede a { color: var(--fg); text-decoration: underline; text-underline-offset: 3px; }
