@@ -946,5 +946,134 @@ as soon as account-b can take it
   <div class="sb"><span>Helme v0.5.158 · Latest version</span></div>
 </section>
 
+<!-- v0.5.163 (includes v0.5.162): a lane reuses the libraries of its project -->
+<section class="shot" id="v0-5-163">
+  <div class="tb"><span>Coordination</span><span>Tickets</span><span class="on x">shop-web</span><span class="x">mobile-app</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="main cols2">
+    <div class="pane"><div class="ph">shop-web · lane checkout-b <em>Working</em></div><pre><span class="m">lane checkout-b opened</span>
+<span class="g">✓</span> node_modules shared with shop-web
+  155 package folders linked in <span class="g">0.09 s</span>
+  0 bytes added to the disk
+
+<span class="o">●</span> npm test
+  <span class="g">✓ 42 passed</span>
+<span class="o">●</span> Editing app/checkout/page.tsx
+  <span class="g">+ Order summary card</span></pre></div>
+    <div class="rp">
+      <div class="rpt"><span>Status</span><span class="on">Reports</span><span>Memory</span><span>Agents</span><span>System</span><em>Updated 09:41</em></div>
+      <div class="reader" style="margin-top:12px">
+        <div class="rh"><b>Shared libraries</b><span class="sp"></span><span class="bt">Copy</span></div>
+        <div class="doc">
+          <h3>settings.md</h3>
+          <pre style="padding:8px 10px;background:#101010;border:1px solid var(--line);border-radius:6px;font-size:12.5px"><span class="b">- Share modules:</span> shop-web, mobile-app</pre>
+          <h3>Why a lane was or was not linked</h3>
+          <table>
+            <tr><th>Lane</th><th>Result</th><th>Time</th></tr>
+            <tr><td>shop-web · checkout-b</td><td><span class="chip ok">linked</span> 155 packages</td><td>0.09 s</td></tr>
+            <tr><td>mobile-app · login-fix</td><td><span class="chip ok">linked</span> 203 packages</td><td>0.12 s</td></tr>
+            <tr><td>shop-web · new-deps</td><td><span class="chip warn">not linked</span> lockfile differs</td><td>installs as before</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sb"><span>Helme v0.5.163 · Latest version</span></div>
+</section>
+
+<!-- v0.5.164: reminders that last -->
+<section class="shot" id="v0-5-164">
+  <div class="tb"><span class="on">Coordination</span><span>Tickets</span><span>Analytics</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="main" style="grid-template-columns: 1.05fr 1fr">
+    <div class="pane"><div class="ph">Chief of Staff</div><pre><span class="y">you ›</span> Remind me on 31 Oct to check the Pro
+  price, and ask docs-site to rerun its
+  tests tomorrow.
+
+<span class="o">● Chief of Staff</span>
+  <span class="g">✓</span> R-0003 set for 2026-10-31 08:00
+  <span class="g">✓</span> R-0004 set for tomorrow 09:00, as a
+    task for docs-site
+
+  They are kept in reminders.md, so a
+  restart or a new Helme install does
+  not lose them.
+
+<span class="y">you ›</span> <span class="cur"></span></pre></div>
+    <div class="rp">
+      <div class="rpt"><span>Status</span><span>Reports</span><span>Memory</span><span>Agents</span><span class="on">System</span><em>Updated 09:12</em></div>
+      <div class="sec"><h4>Reminders</h4>
+        <div class="rem"><code>R-0003</code><span>Check the Pro price with the owner<small>Chief of Staff</small></span><span class="when">2026-10-31 08:00</span></div>
+        <div class="rem"><code>R-0004</code><span>Rerun the tests<small>Task for docs-site</small></span><span class="when">2026-10-26 09:00</span></div>
+        <div class="rem"><code>R-0005</code><span>Look at last week's plan<small>Chief of Staff</small></span><span class="when">in 2 days</span></div>
+      </div>
+      <div class="sec" style="padding-top:14px"><h4>Delivered</h4>
+        <div class="rem"><code>R-0002</code><span>Renew the booking-api domain<small>Chief of Staff</small></span><span class="when"><span class="chip ok">sent</span> 2026-10-24 08:00</span></div>
+        <div class="rem"><code>R-0001</code><span>Send the weekly summary<small>Chief of Staff</small></span><span class="when"><span class="chip warn">late</span> 2026-10-21 08:00</span></div>
+        <div class="note">A reminder comes once. If Helme was off at the time, it comes when Helme is back and is marked late.</div>
+      </div>
+    </div>
+  </div>
+  <div class="sb"><span>Helme v0.5.164 · Latest version</span></div>
+</section>
+
+<!-- v0.5.167 (includes v0.5.165 - v0.5.166): merge order for pull requests -->
+<section class="shot" id="v0-5-167">
+  <div class="tb"><span>Coordination</span><span>Tickets</span><span class="x">shop-web</span><span>Analytics</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="main" style="grid-template-columns: 0.8fr 1.45fr">
+    <div class="pane"><div class="ph">shop-web <em>Working</em></div><pre><span class="y">›</span> [Task from the Chief of Staff]
+  Pull request #14 conflicts with main.
+  Bring main into helme/checkout-b.
+
+<span class="o">●</span> git merge origin/main
+  <span class="g">✓</span> merged, 1 conflict in styles.css
+<span class="o">●</span> Fixing styles.css
+<span class="o">●</span> npm test
+  <span class="g">✓ 42 passed</span>
+<span class="o">●</span> git push
+  <span class="g">✓</span> #14 no longer conflicts</pre></div>
+    <div class="rp">
+      <div class="rpt"><span>Status</span><span class="on">Reports</span><span>Memory</span><span>Agents</span><span>System</span><em>Updated 10:26</em></div>
+      <div class="sec"><h4>Waiting for you <span class="cnt">5</span></h4>
+        <div class="order"><b>shop-web · Merge in order:</b> 1) #12 then 2) #13 then 3) #14</div>
+        <div class="item"><span class="tag">Do</span><span class="t">Merge pull request #12 (order summary card)</span><span class="step">step 1 of 3</span><span class="bt">Open on GitHub</span></div>
+        <div class="item"><span class="tag">Do</span><span class="t">Merge pull request #13 (delivery options)</span><span class="step">step 2 of 3, after #12</span><span class="bt">Open on GitHub</span></div>
+        <div class="item"><span class="tag">Do</span><span class="t">Merge pull request #14 (checkout page)<small>Conflict: the project's agent was asked to bring main in</small></span><span class="step">step 3 of 3, after #13</span><span class="bt">Open on GitHub</span></div>
+        <div class="item" style="border-color:#5c4a14"><span class="tag" style="color:var(--amber)">Check</span><span class="t">Pull request #9 goes into a branch that was already merged<small>Point it at main with one press on GitHub: Edit, then Base branch</small></span><span class="bt">How to</span></div>
+        <div class="item"><span class="tag">Done</span><span class="t">2 pull requests open for more than 7 days, nobody touched them (#4, #6)</span><span class="bt">How to</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="sb"><span>Helme v0.5.167 · Latest version</span></div>
+</section>
+
+<!-- v0.5.157, second picture: pictures on the phone page -->
+<section class="shot" id="v0-5-157-phone">
+  <div class="tb"><span class="on">Coordination</span><span>Tickets</span><span>Analytics</span><span>Review</span><span>+</span><span class="sp">Split</span></div>
+  <div class="main" style="grid-template-columns: 1fr 1fr; background:#101010">
+    <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border-right:1px solid var(--line)">
+      <div class="cap">The item on your phone</div>
+      <div class="phone big">
+        <div class="ph-h"><span>Waiting for you</span><span style="color:var(--muted)">2</span></div>
+        <div class="it"><b>Approve the new checkout page</b><small>shop-web · Approve · how to</small>
+          <div class="pics">
+            <figure><div class="wire"><i class="w60"></i><i class="card"></i><i class="card"></i><i class="btn"></i></div><small>Before</small></figure>
+            <figure><div class="wire after"><i class="w60"></i><i class="card"></i><i class="card"></i><i class="btn"></i></div><small>After</small></figure>
+          </div>
+          <div class="cap" style="margin-top:6px">Tap a picture to enlarge</div></div>
+        <div class="it">Pick one of two app icons<small>mobile-app · 2 pictures</small></div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px">
+      <div class="cap">A picture enlarged</div>
+      <div class="phone big">
+        <div class="ph-h"><span>After</span><span style="color:var(--muted)">✕</span></div>
+        <div class="zoom"><span class="arr">‹</span><div class="wire after"><i class="w60"></i><i class="card"></i><i class="card"></i><i class="w80"></i><i class="btn"></i></div><span class="arr">›</span></div>
+        <div class="cnt2">2 / 4</div>
+        <div class="cap" style="text-align:center">Swipe or use the arrows to move between pictures</div>
+      </div>
+    </div>
+  </div>
+  <div class="sb"><span>Helme v0.5.157 · Pictures on the phone page</span></div>
+</section>
+
 </body>
 </html>
