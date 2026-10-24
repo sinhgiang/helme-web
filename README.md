@@ -268,9 +268,11 @@ updates/                   the Updates page
   shots/shot.css           styles of the screenshots
   shots/render.mjs         renders shots/<id>.png from source.html
   shots/*.png              the rendered screenshots of the older versions
-tests/                     npm test: unit tests, a page test with a fake GitHub API, and seo.test.mjs
-                           (titles, descriptions, canonical, sitemap, llms.txt, JSON-LD equal to the FAQ, voice)
-package.json               only the test script; the site has no dependencies
+scripts/lint.mjs, build.mjs  npm run lint and npm run build, the checks a pull request runs
+tests/                     npm test: unit tests, a page test with a fake GitHub API, seo.test.mjs
+                           (titles, descriptions, canonical, sitemap, llms.txt, JSON-LD equal to the FAQ, voice),
+                           and tests that lint and build fail on a broken site
+package.json               the test, lint and build scripts; the site has no dependencies
 vercel.json                trailingSlash, so /updates becomes /updates/
 ```
 
@@ -291,6 +293,16 @@ Then open the address it prints. There is nothing to install or build. Push a br
 
 Run the tests with `npm test` (Node.js 22 or newer). The page test needs Microsoft Edge or Chrome and is
 skipped without one.
+
+## Checks on a pull request
+
+The site is static files with no dependencies, so there is no compiler or bundler to run. `.github/workflows/ci.yml` runs three scripts on every pull request, in this order, and any one failing fails the pull request:
+
+- `npm run lint`: every script, JSON file and JSON-LD block must parse, ids are not repeated, `<html>` has `lang`, CSS braces balance, and no `console.log` or `debugger` is left in a shipped script.
+- `npm run build`: the site is checked the way a visitor reaches it. Every local link, script, stylesheet, image and `url()` points at a file that exists, every `#anchor` has its id, every page in `sitemap.xml` exists, and every entry in `updates/releases.js` has a version, a date, a title and a screenshot file.
+- `npm test`: the unit and page tests (`tests/ci-checks.test.mjs` proves lint and build fail on a broken site).
+
+Run the same three on your machine before you push. They run on GitHub's hosted `ubuntu-latest`; this repository is public, so it must not use a runner on a personal computer.
 
 
 ## Adding a release to the Updates page

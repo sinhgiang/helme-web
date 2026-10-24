@@ -16,4 +16,5 @@
 - Test account: none; the site has no login.
 - Main flow to go through: open `/updates/`; the newest version is on top with "Latest"; click an older version in the list; its notes and screenshot show; "Older" and "Newer" move between versions.
 - Tests: `npm test` (unit tests, and page tests in headless Edge or Chrome with a fake GitHub API that pages like GitHub).
+- Lint and build check: `npm run lint` (scripts parse, JSON and JSON-LD are valid) and `npm run build` (every link, asset, anchor, sitemap page and release screenshot resolves). Both are in `scripts/`, need no dependencies, and run with `npm test` in `.github/workflows/ci.yml`.
 - Screenshot: headless Edge, `msedge --headless=new --screenshot=<file>.png --window-size=1440,900 <address>`; `updates/shots/render.mjs` shows the same use.
