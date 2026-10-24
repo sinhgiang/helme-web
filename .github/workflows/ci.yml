@@ -1,7 +1,8 @@
 name: CI
 
-# Runs the tests on every pull request. The site is static HTML (no build step, Vercel already
-# builds a preview of each pull request), so there is nothing to build here.
+# Lint, build check and tests on every pull request. The site is static HTML with no build step and
+# no dependencies, so "lint" and "build" are the dependency-free scripts in scripts/ (see README,
+# "Checks on a pull request"). Vercel also builds a preview of each pull request.
 on:
   pull_request:
     paths-ignore:
@@ -17,7 +18,7 @@ permissions:
   contents: read
 
 jobs:
-  test:
+  check:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -31,4 +32,6 @@ jobs:
 
       # No `npm ci`: package.json has no dependencies and the repo has no lockfile, so there is
       # nothing to install. The page tests use the Google Chrome that ubuntu-latest already has.
+      - run: npm run lint
+      - run: npm run build
       - run: npm test
