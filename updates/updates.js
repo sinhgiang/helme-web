@@ -132,7 +132,6 @@
         a.removeAttribute("aria-current");
       }
     });
-    document.title = "Helme " + r.version + " · Updates";
   }
 
   function current() { return decodeURIComponent(location.hash.slice(1)); }

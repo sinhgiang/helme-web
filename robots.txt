@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://helme-web.vercel.app/sitemap.xml

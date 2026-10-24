@@ -6,6 +6,8 @@
 - Updates page: `updates/index.html`, `updates/updates.js`, `updates/updates.css`; the user gets there by the "Updates" link in the footer, or https://helme-web.vercel.app/updates/.
 - Release entries: versions up to v0.5.28 in `updates/releases.js`; newer ones are the GitHub releases of `sinhgiang/helme-web`, read page by page (100 a page) and merged by `updates/releases-core.js`.
 - Release screenshots: drawn in `updates/shots/source.html`, rendered by `updates/shots/render.mjs`; newer ones are the `screenshot.png` asset of each GitHub release.
+- Search and AI answers (SEO and AEO): `<head>` of `index.html` and `updates/index.html` (title, description, canonical, share tags, JSON-LD), `robots.txt`, `sitemap.xml`, `llms.txt`, `404.html`; the FAQ on the home page and its `FAQPage` JSON-LD must stay word for word equal (`tests/seo.test.mjs` checks it). A new page must be added to `sitemap.xml` and `llms.txt`.
+- Voice: `docs/brand-voice.md` (who speaks, words to use and never use, the questions visitors ask).
 - Hosting: Vercel project `helme-web`; `main` is production, every pushed branch gets a preview. `vercel.json` adds the trailing slash.
 
 ## Run and check
