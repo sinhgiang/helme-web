@@ -256,6 +256,10 @@ No. This repository holds the website only. Helme's own source is in a separate,
 index.html, styles.css     the home page
 logo.svg, favicon.svg       the Helme mark (the captain’s wheel) and the favicon
 og.png, og/og.html         the share preview image and its HTML source
+robots.txt, sitemap.xml    what search engines may read, and the two pages of the site
+llms.txt                   a short description of the site for AI assistants
+404.html                   the page for an address that does not exist (not indexed)
+docs/brand-voice.md        the voice, keywords and visitor questions every text follows
 updates/                   the Updates page
   releases.js              the notes of the versions up to v0.5.28 (newer ones are GitHub releases)
   releases-core.js         reads every page of GitHub releases and merges them with releases.js
@@ -264,7 +268,8 @@ updates/                   the Updates page
   shots/shot.css           styles of the screenshots
   shots/render.mjs         renders shots/<id>.png from source.html
   shots/*.png              the rendered screenshots of the older versions
-tests/                     npm test: unit tests, and a page test with a fake GitHub API
+tests/                     npm test: unit tests, a page test with a fake GitHub API, and seo.test.mjs
+                           (titles, descriptions, canonical, sitemap, llms.txt, JSON-LD equal to the FAQ, voice)
 package.json               only the test script; the site has no dependencies
 vercel.json                trailingSlash, so /updates becomes /updates/
 ```
