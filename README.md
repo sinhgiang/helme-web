@@ -54,6 +54,7 @@ download page.
 - [Tech stack](#tech-stack)
 - [Repository](#repository)
 - [Get started](#get-started)
+- [Checks on a pull request](#checks-on-a-pull-request)
 - [Adding a release to the Updates page](#adding-a-release-to-the-updates-page)
 
 ## The problem
@@ -303,7 +304,6 @@ The site is static files with no dependencies, so there is no compiler or bundle
 - `npm test`: the unit and page tests (`tests/ci-checks.test.mjs` proves lint and build fail on a broken site).
 
 Run the same three on your machine before you push. They run on GitHub's hosted `ubuntu-latest`; this repository is public, so it must not use a runner on a personal computer.
-
 
 ## Adding a release to the Updates page
 
